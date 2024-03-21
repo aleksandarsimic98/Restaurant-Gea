@@ -1,0 +1,45 @@
+.apsclass{
+    margin-top: 100px;
+}
+.dobrodoslica{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.menii{
+    background-color: rgb(227, 227, 227);
+    height: 350px;
+    box-shadow: 5px 5px 10px black;
+}
+.naslovv{
+    position: relative;
+    top: 60px;
+    font-size: 22px;
+    color: black;
+}
+.naslovv:hover{
+    text-decoration: underline;
+}
+
+.slikaa{
+    width: 200px;
+    height: 150px;
+    position: relative;
+    top: 80px;
+    border-radius: 6%;
+    box-shadow: 2px 2px 10px black;
+}
+.slikaa:hover{
+    width: 230px;
+    height: 180px;
+
+}
+  footer{
+    margin-top: 100px;
+}  
+.navbar-navvv{
+    position: absolute;
+    right: 500px;
+    color: black;
+    font-size: 18px;
+}
+

@@ -1,0 +1,104 @@
+
+.forma_dodaj{
+    position: relative;
+     width: 500px;
+     height: 650px;
+     background-color: rgb(237, 237, 237);
+     border: 3px solid rgba(255, 106, 0, 0.865);
+     display: inline-block;
+     box-shadow: 3px 3px 10px black;
+     margin-top: 50px;
+ }
+ .korisnici{
+    position: relative;
+     width: 1000px;
+     height: 650px;
+     background-color: rgb(237, 237, 237);
+     border: 3px solid rgba(255, 106, 0, 0.865);
+     display: inline-block;
+     box-shadow: 3px 3px 10px black;
+    
+ }
+ .form_stavka{
+    position: relative;
+    padding: 7px;
+    
+}
+ .naslov_forme{
+    position: relative;
+    text-align: center;
+    top: 30px;
+    margin-top: 100px;
+    margin-bottom: 45px;
+}
+.dugme_dodaj{
+    position: relative;
+    width: 415px;
+    height: 43.5px;
+    border-radius: 60px;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:3px solid rgba(255, 106, 0, 0.865);
+    font-weight: bold;
+    color: white;
+}
+.dugme_dodaj:hover{
+    background-color: white;
+    border:3px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+}
+
+.dugme_dodaj:hover{
+    opacity: .8 ;
+}
+
+footer{
+    margin-top: 50px;
+}
+img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+.navbar-navvvv{
+    position: absolute;
+    right: 600px;
+}
+.navbar-navvv{
+    position: absolute;
+    right: 650px;
+}
+.navbar-navvvvv{
+    position: absolute;
+    right: 160px;
+    top: 36px;
+}
+.logout{
+    position: absolute;
+    right: 195px;
+    top: 35px;
+    width: 110px;
+    height: 40px;
+   font-weight: bold;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:2px solid rgba(255, 106, 0, 0.865);
+}
+.brisanje{
+    font-weight: bold;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:2px solid rgba(255, 106, 0, 0.865);
+}
+.brisanje:hover{
+    background-color: white;
+    border:2px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+}
+
+@media only screen and (max-width: 1400px){
+    .logout {
+        right: 135px;
+       top: 17px;
+    }
+}
+

@@ -1,0 +1,122 @@
+footer{
+    height: 600px;
+    background-color: rgb(111, 110, 110);
+    border-top: 3px solid rgba(255, 106, 0, 0.865);
+    border-bottom: 3px solid rgba(255, 106, 0, 0.865);
+    position: relative;
+    bottom: 0;
+   
+}
+.foonas{
+    color: white;
+    position: relative;
+    top: 50px;
+}
+.inkonice{
+    width: 150px;
+    height: 150px;
+}
+a{
+    text-decoration: none;
+}
+.fa-copyright{
+    position: absolute;
+    bottom: 29px;
+    left: 180px;
+}
+.autor{
+    position: absolute;
+    bottom: 25px;
+    left: 200px;
+    color: white;
+}
+.kon{
+    color: white;
+}
+.kon:hover{
+    color:rgba(255, 106, 0, 0.865);;
+}
+.tel{
+    color: white;
+}
+iframe{
+    width: 350px;
+    height: 180px;
+}
+.footer-brand{
+    position: relative;
+    color: white;
+    top: 30px;
+}
+.footerlinija{
+    position: relative;
+    top:100px;
+}
+.drumreze{
+    background-color: rgb(75, 75, 75);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.drumrezee{
+    position: relative;
+    top:205px;
+    right: -180px;
+    
+}
+.drumreze:hover{
+    background-color: gray;
+}
+.fa-brands{
+    position: relative;
+    top: 25%;
+}
+@media only screen and (max-width: 1400px){
+    footer {
+        height: auto; /* Adjust height as needed for smaller screens */
+    }
+
+    .container.text-center {
+        padding: 30px; /* Add padding to center-aligned containers */
+    }
+
+    .col {
+        width: 100%; /* Make columns take full width on smaller screens */
+        text-align: center; /* Center-align text within columns */
+        margin-bottom: 20px; /* Add some spacing between columns */
+    }
+
+    .footer-brand img {
+        max-width: 100%; /* Ensure the footer logo scales down properly */
+    }
+
+    .kon {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .tel {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .fa-brands {
+        font-size: 15px;
+        top: 20%;
+         /* Adjust social media icon size for smaller screens */
+    }
+
+    .footerlinija {
+        margin-top: 20px; /* Add some margin above the horizontal line */
+    }
+    .drumrezee{
+        right: -20px;
+        top:200px;
+    }
+
+    .drumreze{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+

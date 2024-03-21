@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(248, 248, 248);
+}
+.dobrodoslica{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+     animation-duration: 2s;
+    animation-name: slidein;
+}
+@keyframes slidein{
+    from{
+        margin-left: -70%;
+    }
+    to {
+        margin-left:0%;
+    }
+}
+.kartice{
+    margin-top: 100px;
+}
+.burger_prez{
+    width: 500px;
+    height: 600px;
+}
+.tekst{
+    position: relative;
+    right: auto;
+    left: auto;
+    top: 170px;
+    bottom: auto;
+    text-align: justify;
+}
+.burger_naslov{
+    position: relative;
+    text-align: left;
+    top: 150px;
+}
+.burger_naslov2{
+    position: relative;
+    text-align: right;
+}
+.tekst2{
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    text-align: justify;
+    top: 25px;
+}
+.card{
+    box-shadow: 3px 3px 10px black;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.pasta{
+    padding-bottom: 100px;
+}
+.btn-primary{
+    border-radius: 60px;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:3px solid rgba(255, 106, 0, 0.865);
+}
+.btn-primary:hover{
+    background-color: white;
+    border:3px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+}
+.preliv{
+    width: 1400px;
+    height: 500px;
+}
+
+.carousel{
+    position: sticky;
+}
+.card {
+    width: 18rem; 
+}
+
+@media only screen and (max-width: 1400px){
+    .card {
+        width: 15rem; 
+    }
+}
+
