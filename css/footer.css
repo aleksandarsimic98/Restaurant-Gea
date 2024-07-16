@@ -58,12 +58,7 @@ iframe{
     height: 50px;
     display: inline-block;
 }
-.drumrezee{
-    position: relative;
-    top:205px;
-    right: -180px;
-    
-}
+
 .drumreze:hover{
     background-color: gray;
 }
@@ -118,5 +113,8 @@ iframe{
     }
 
 }
-
-
+@media only screen and (max-width: 768px){  
+        .copyr{
+            justify-content: center;
+        }
+}

@@ -5,20 +5,8 @@ body{
     text-align: center;
     padding-top: 150px;
     padding-bottom: 50px;
-     animation-duration: 2s;
-    animation-name: slidein;
 }
-@keyframes slidein{
-    from{
-        margin-left: -70%;
-    }
-    to {
-        margin-left:0%;
-    }
-}
-.kartice{
-    margin-top: 100px;
-}
+
 .burger_prez{
     width: 500px;
     height: 600px;
@@ -27,8 +15,9 @@ body{
     position: relative;
     right: auto;
     left: auto;
-    top: 170px;
     bottom: auto;
+    top: 170px;
+    
     text-align: justify;
 }
 .burger_naslov{
@@ -54,8 +43,9 @@ body{
 .card:hover{
     transform: scale(1.1);
 }
+
 .pasta{
-    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 .btn-primary{
     border-radius: 60px;
@@ -68,8 +58,11 @@ body{
     color: rgba(255, 106, 0, 0.865);
 }
 .preliv{
-    width: 1400px;
-    height: 500px;
+    position: relative;
+    width: 800px;
+    height: 200px;
+    top: -120px;
+
 }
 
 .carousel{
@@ -79,9 +72,90 @@ body{
     width: 18rem; 
 }
 
+.text{
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: italic;
+    position: relative;
+    top: 195px;
+}
+.headingprod{
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+.caros{
+    background-color: rgb(251, 177, 40);
+    height: 820px;
+    
+}
+
+.carousel{
+    position: relative;
+    top: 200px;
+}
+.blankdiv{
+    position: relative;
+    top: -200px;
+    height: 69px;
+    
+}
 @media only screen and (max-width: 1400px){
     .card {
         width: 15rem; 
     }
 }
+@media only screen and (max-width: 1199px){
+    .card {
+        width: 13rem; 
+    }
+}
+@media only screen and (max-width: 991px){
+    .card {
+        width: 9rem; 
+    }
+    .burger_prez {
+        position: relative;
+        top: 120px;
+        width: 350px;
+        height: 400px;
+        
+    }
+    .burger_prez2{
+        position: relative;
+        top: 50px;
+        width: 350px;
+        height: 300px;
+    }
+   
+}
+@media only screen and (max-width: 768px){ 
+    .card {
+        width: 16rem; 
+        margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .burger_naslov{
+        top: -60px;
+    }
+    .tekst{
+        top: -60px; 
+    }
+.burger_prez {
+    width: 250px;
+    height: 300px;
+    top: 0px;
+}
+.burger_prez2{
+    width: 250px;
+    height: 200px;
+    top: 0px;
 
+}
+
+
+}

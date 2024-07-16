@@ -19,13 +19,14 @@ if(!isset($_SESSION['korisnik'])){
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/predjela.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Predjela</title>
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-  <a class="navbar-brand" href="pocetna.php"><img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>RESTORAN GEA</b></i>  </a>
+  <a class="navbar-brand" href="pocetna.php"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -85,7 +86,7 @@ include_once("connection.php");       //connection to the DB
 
 <div class="karticepred">
   <div class="container text-center">
-  <div class="row">
+  <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
     <div class="col">
     <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatprvopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
@@ -137,7 +138,7 @@ include_once("connection.php");       //connection to the DB
 
 <div class="karticepred">
   <div class="container text-center">
-  <div class="row">
+  <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
     <div class="col">
     <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatpetopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
@@ -190,7 +191,7 @@ include_once("connection.php");       //connection to the DB
   <div class="container text-center">
     <div class="row">
      <div class="col">
-     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>Restoran Gea</b></i>  </a> </p>
+     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a> </p>
       <br> <br><br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
       <br> <br>
@@ -225,6 +226,13 @@ include_once("connection.php");       //connection to the DB
     </div>
    </div>
 </footer> 
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
 </body>
 </html>
 <script>

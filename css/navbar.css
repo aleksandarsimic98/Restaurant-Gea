@@ -2,17 +2,17 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; 
+    z-index: 1; 
+    backdrop-filter: blur(50px);
 }
 .container-fluid{
-    height: 75px;
     position: absolute;
-    background-color: rgb(251, 177, 40);
+    background-color: rgb(251, 177, 40, .82);
     height: 105px;
     position: fixed; 
     z-index:1;
     top: 0;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur();
 }
 .navbar-brand{
     color: white;
@@ -20,8 +20,8 @@
     left: 103px;
 }
 .navslika{
-    width: 80px;
-    height: 80px;
+    width: 250px;
+    height: 60px;
     position: relative;
     top: 0px;
 }
@@ -32,6 +32,7 @@
     font-size: 18px; 
     margin-left: 30px;
     margin-right: 30px;
+   
 
 }
 .navbar-navv:hover{
@@ -39,22 +40,24 @@
 }
 .navbar-navvv{
     position: absolute;
-    right: 540px;
+    right: 485px;
     color: black;
     font-size: 18px;
     margin-left: 30px;
     margin-right: 30px;
+   
 }
 .navbar-navvv:hover{
     opacity: 0.7;
 }
 .navbar-navvvv{
     position: absolute;
-    right: 650px;
+    right: 575px;
     color: black;
     font-size: 18px;
     margin-left: 30px;
     margin-right: 30px;
+   
 }
 .navbar-navvvv:hover{
     opacity: 0.7;
@@ -63,7 +66,7 @@
     content: "";
     position: absolute;
     bottom: -39px;
-    height: 6px;
+    height: 3px;
     width: 0;
     background: rgb(239, 34, 2);
     border-radius: 50px;
@@ -76,7 +79,7 @@
     content: "";
     position: absolute;
     bottom: -39px;
-    height: 6px;
+    height: 3px;
     width: 0;
     background: rgb(239, 34, 2);
     border-radius: 50px;
@@ -89,7 +92,7 @@
     content: "";
     position: absolute;
     bottom: -39px;
-    height: 6px;
+    height: 3px;
     width: 0;
     background: rgb(239, 34, 2);
     border-radius: 50px;
@@ -98,13 +101,7 @@
 .navbar-navvvv:hover:before{
     width: 100%;
 }
-.navbar{
-    border-top: 3px solid rgba(255, 106, 0, 0.865);
-    border-bottom: 3px solid rgba(255, 106, 0, 0.865);
-    position: fixed; 
-    top: 0;
-    backdrop-filter: blur(50px);
-}
+
 .vreme{
     position: absolute;
     right: 45px;
@@ -148,7 +145,7 @@
     content: "";
     position: absolute;
     bottom: -39px;
-    height: 6px;
+    height: 3px;
     width: 0;
     background: rgb(239, 34, 2);
     border-radius: 50px;
@@ -158,60 +155,71 @@
     width: 100%;
 }
 
+.navbar-toggler{
+    position: relative;
+    left: 85%;
+    border: none;
+}
+
 
 @media only screen and (max-width: 1400px){
-
-.container-fluid{
-    height: 72px;
-}
-.navbar-brand{
-    left: 20px; /* Adjust left position for smaller screens */
-}
-.navbar-navv{
-    right: 270px; /* Adjust right position for smaller screens */
-}
-.navbar-navvv{
-    right: 440px; /* Adjust right position for smaller screens */
-}
-.navbar-navvvv{
-    right: 550px; /* Adjust right position for smaller screens */
-}
-.navbar-navvvvv{
-    right: 88px; /* Adjust right position for smaller screens */
-}
-.vreme{
-    right: 15px; /* Adjust right position for smaller screens */
-}
-.navslika{
-    width: 65px;
-    height: 65px;
-}
-.navbar-brand{
-    left: 103px;
-}
-.navbar-navv:before{
-    bottom: -22px;
-}
-.navbar-navvv:before{
-    bottom: -22px;
-}
-.navbar-navvvv:before{
-    bottom: -22px;
-}
+    .navbar-brand{
+        left: 20px; /* Adjust left position for smaller screens */
+    }
+   
+    .vreme{
+        right: 15px; /* Adjust right position for smaller screens */
+    }
+    .navslika{
+        width: 250px;
+        height: 60px;
+    }
+    .navbar-brand{
+        left: 103px;
+    }
+    .korpa{
+        right: 420px;    
+    }
+    .korpa:before{
+        bottom: -22px;
+    }
+    .logout{
+        right: 305px;
+        top: 18px;
+    }
+    }
 
 
-
-.korpa{
-    right: 420px;    
-}
-.korpa:before{
-    bottom: -22px;
-}
-.logout{
-    right: 305px;
-    top: 18px;
-
+@media only screen and (max-width: 768px){  
+    .navbar-navv, .navbar-navvv, .navbar-navvvv, .navbar-navvvvv, .vreme
+    {
+            display: none;
+    }
+   .navslika{
+    left: -30%;
+    width: 200px;
+    height: 50px;
+   }
 }
 
 
+@media only screen and (max-width: 991px){
+    .navbar-navv, .navbar-navvv, .navbar-navvvv, .navbar-navvvvv, .vreme
+    {
+            display: none;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .navbar-navv{
+        right: 300px;
+    }
+    .navbar-navvv{
+        right: 415px;
+    }
+    .navbar-navvvv{
+        right: 505px;  
+    }
+    .navbar-navvvvv{
+        right: 113px;
+    }
 }

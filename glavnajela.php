@@ -20,13 +20,14 @@ if(!isset($_SESSION['korisnik'])){
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/predjela.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Glavna jela</title>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-  <a class="navbar-brand" href="pocetna.php"><img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>RESTORAN GEA</b></i>  </a>
+  <a class="navbar-brand" href="pocetna.php"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -93,9 +94,9 @@ if(!isset($_SESSION['korisnik'])){
 
 <div class="karticepred">
   <div class="container text-center">
-  <div class="row">
+  <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatprvopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatprvopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -106,7 +107,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatdrugopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatdrugopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -117,7 +118,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  .  $rezultattrecepredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .   $rezultattrecepredejloo['naziv'] . "    </h5>   "  ?> 
@@ -128,7 +129,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatcetvrtopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatcetvrtopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -144,9 +145,9 @@ if(!isset($_SESSION['korisnik'])){
 
 <div class="karticepred">
   <div class="container text-center">
-  <div class="row">
+  <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatpetopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatpetopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -157,7 +158,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatsestopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatsestopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -168,7 +169,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
     <?php echo " <img src='uploads/"  . $rezultatsedmopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatsedmopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -179,7 +180,7 @@ if(!isset($_SESSION['korisnik'])){
 </div>
     </div>
     <div class="col">
-    <div class="card" >
+    <div class="card">
   < <?php echo " <img src='uploads/"  . $rezultatosmopredejloo['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatosmopredejloo['naziv'] . "    </h5>   "  ?> 
@@ -198,7 +199,7 @@ if(!isset($_SESSION['korisnik'])){
   <div class="container text-center">
     <div class="row">
      <div class="col">
-     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>Restoran Gea</b></i>  </a> </p>
+     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""><b><i>Restoran Gea</b></i>  </a> </p>
       <br> <br><br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
       <br> <br>
@@ -233,6 +234,11 @@ if(!isset($_SESSION['korisnik'])){
     </div>
    </div>
 </footer> 
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
