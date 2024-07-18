@@ -3,10 +3,11 @@
 }
 .menii{
     position: relative;
-    top: 100px;
+    top: 50px;
     background-color: rgb(227, 227, 227);
     height: 350px;
     box-shadow: 5px 5px 10px black;
+    
 
 }
 .naslovv{
@@ -41,4 +42,16 @@
     color: black;
     font-size: 18px;
 }
+.navbar-navvvv{
+    right: 610px;
+}
 
+@media only screen and (max-width: 991px){
+    .korpa, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme
+    {
+            display: none;
+    }
+}
+@media only screen and (max-width: 678px){
+    .korpa, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme, .predjelo{display: none;}
+}

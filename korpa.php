@@ -96,9 +96,9 @@ if ($konekcija->query($sql) === TRUE) {
       <span class="navbar-toggler-icon"></span>
     </button>
       <form action="logout.php">
-      <button type="submit" class="logout" value="Odjavi se">Odjavi se</button>
+      <button type="submit" class="logout" value="Logout">Logout</button>
 </form>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>POČETNA</b></i> </a>
+      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
   </div>

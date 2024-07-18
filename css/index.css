@@ -17,7 +17,6 @@ body{
     left: auto;
     bottom: auto;
     top: 170px;
-    
     text-align: justify;
 }
 .burger_naslov{
@@ -89,6 +88,7 @@ body{
 .caros{
     background-color: rgb(251, 177, 40);
     height: 820px;
+    width: 100%;
     
 }
 
@@ -105,6 +105,20 @@ body{
 @media only screen and (max-width: 1400px){
     .card {
         width: 15rem; 
+    }
+    .caros{
+        height: 710px;
+    }
+    .preliv{
+        width: 700px;
+        height: 150px;
+        top: -120px;
+    }
+    #carouselExampleCaptions{
+        top: 140px;
+    }
+    .text{
+        top: 150px;
     }
 }
 @media only screen and (max-width: 1199px){
@@ -128,6 +142,16 @@ body{
         top: 50px;
         width: 350px;
         height: 300px;
+    }
+    .text{
+        position: relative;
+        top: 20px;
+    }
+    #carouselExampleCaptions{
+        top: 190px;
+    }
+    .text{
+        top: 20px;
     }
    
 }
@@ -156,6 +180,19 @@ body{
     top: 0px;
 
 }
-
-
+.preliv{
+    width: 300px;
+    height: 80px;
+    top: -80px;    
+}
+.text{
+    top: -60px;
+}
+#carimg{
+    width: 300px;
+    height: 300px;
+}
+#carouselExampleCaptions{
+    top: 170px;
+}
 }

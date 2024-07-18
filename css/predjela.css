@@ -50,10 +50,24 @@
 .card{
    width: 18rem; 
 }
-
+.navbar-navvvv{
+    right: 610px;
+}
 
 @media only screen and (max-width: 1400px){
     .card {
         width: 15rem; 
+    }
+}
+@media only screen and (max-width: 991px){
+    .korpa, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme
+    {
+            display: none;
+    }
+}
+@media only screen and (max-width: 678px){
+    .korpa, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme, .predjelo{display: none;}
+    .naslovpred{
+        margin-top: 100px;
     }
 }

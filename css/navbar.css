@@ -160,7 +160,9 @@
     left: 85%;
     border: none;
 }
-
+.nav-item{
+    display: none;
+}
 
 @media only screen and (max-width: 1400px){
     .navbar-brand{
@@ -187,6 +189,7 @@
         right: 305px;
         top: 18px;
     }
+   
     }
 
 
@@ -200,6 +203,11 @@
     width: 200px;
     height: 50px;
    }
+   .nav-item{
+    display: block;
+    position: relative;
+    left: 85%;
+}
 }
 
 
@@ -207,6 +215,19 @@
     .navbar-navv, .navbar-navvv, .navbar-navvvv, .navbar-navvvvv, .vreme
     {
             display: none;
+    }
+    .nav-item{
+        display: block;
+        position: relative;
+        left: 35%;
+        top: 45px;
+    }
+    .navbar-nav{
+        position: relative;
+        top: 67px;
+        height: 700px;
+        width: 300px;
+        background-color: rgb(69, 69, 69);
     }
 }
 @media only screen and (max-width: 1199px){
@@ -222,4 +243,5 @@
     .navbar-navvvvv{
         right: 113px;
     }
+   
 }

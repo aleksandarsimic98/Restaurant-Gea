@@ -31,11 +31,11 @@ if(!isset($_SESSION['korisnik'])){
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <a class="korpa" href="korpa.php"> <i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i> <b><i>KORPA</b></i> </a>
+      <a class="korpa" href="korpa.php"> <i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i> <b><i>Cart</b></i> </a>
       <form action="logout.php">
-      <button type="submit" class="logout" value="Odjavi se">Odjavi se</button>
+      <button type="submit" class="logout" value="Logout">Logout</button>
 </form>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>POČETNA</b></i> </a>
+      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
   </div>
@@ -196,44 +196,32 @@ if(!isset($_SESSION['korisnik'])){
 
 
 <footer>
-  <div class="container text-center">
+<div class="container text-center">
     <div class="row">
-     <div class="col">
-     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""><b><i>Restoran Gea</b></i>  </a> </p>
-      <br> <br><br>
+     <div class="col-sm">
+     <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
+      <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
-      <br> <br>
+      <br>
       <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
-      <br><br>
+      <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
-      <br> <br>
+      <br> 
       <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
-      <i class="fa-regular fa-copyright" style="color: #ffffff;"></i> <i class="autor">Sva prava su zadržana. Aleksandar Simić 2023</i>
-      
-    
      </div>
-      <div class="col">
+      <div class="col-sm">
      <p class="foonas"> <b>RADNO VREME</b></p>
-     <br><br><br><br><br>
+     <br><br>
      <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
-     <br> 
+     <br>
      <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
-     
-       <div class="drumrezee">
+     <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
-    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a> 
-     </div>
-     </div>
-
- <div class="container text-center">
-    <div class="row">
-     <div class="col">
-    <hr class="footerlinija">
-    </div>
-    </div>
-   </div>
-</footer> 
+    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
+     </div> 
+</div>
+</footer>  
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

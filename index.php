@@ -20,13 +20,33 @@
     <a class="navbar-brand" href="index.php"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt="Logo Restaurant Gea"> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-      
+     
     </button>
       <a class="navbar-navv" href="sign-up.php"> <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>Sign Up</b></i> </a>
       <a class="navbar-navvv" href="login.php"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> <b><i>Login</b></i> </a>
       <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
        <h6 class="vreme">  </h6>
+
+
+
+       <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+                </li>
+            </ul>
+        </div>
+
   </div>
 </nav>
 
@@ -46,9 +66,9 @@
 
     <div class="row">
     <div class="col-sm-8">
-    <img src="img/carousel/dd3d416-326cc8e4-ec52-451f-bcd2-5fba96dea4b3.png"  height="530px" class="d-block w-100" alt="...">
+    <img id="carimg" src="img/carousel/dd3d416-326cc8e4-ec52-451f-bcd2-5fba96dea4b3.png" width="530px"  class="d-block w-100" alt="...">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm">
         <h5 class="text">First slide label</h5>
         <hr class="text">
         <p class="text">Some representative placeholder content for the first slide.</p>
@@ -61,9 +81,9 @@
 
     <div class="row">
     <div class="col-sm-8">
-    <img src="img/carousel/pngimg.com - breakfast_PNG24.png" height="530px" class="d-block w-100" alt="image carousel">
+    <img id="carimg" src="img/carousel/pngimg.com - breakfast_PNG24.png" width="530px"  class="d-block w-100" alt="image carousel">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm">
       
     <h5 class="text">Second slide label</h5>
     <hr class="text">
@@ -76,9 +96,9 @@
 
     <div class="row">
     <div class="col-sm-8">
-    <img src="img/carousel/coffeeand-croissants-breakfast-7g3c924j3r32w7h5.png" height="530px" class="d-block w-100" alt="...">
+    <img id="carimg" src="img/carousel/coffeeand-croissants-breakfast-7g3c924j3r32w7h5.png" width="530px" class="d-block w-100" alt="...">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm">
     <h5 class="text">Third slide label</h5>
     <hr class="text">
     <p class="text">Some representative placeholder content for the third slide.</p>
@@ -233,7 +253,6 @@
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
       <br> 
       <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
-     
      </div>
       <div class="col-sm">
      <p class="foonas"> <b>RADNO VREME</b></p>
@@ -245,17 +264,8 @@
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
-
-   
-     </div>
-
-   
-  
+     </div> 
 </div>
-
-
-
-
 </footer>  
 
 
