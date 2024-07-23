@@ -35,9 +35,25 @@ if(!isset($_SESSION['korisnik'])){
       <form action="logout.php">
       <button type="submit" class="logout" value="Logout">Logout</button>
 </form>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
+      <a class="navbar-navvvv" href="pocetna.php" id="home"> <i class="fa-solid fa-house"  style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pocetna.php"><i class="fa-solid fa-house"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+                </li>
+            </ul>
+        </div>
   </div>
 </nav>
 

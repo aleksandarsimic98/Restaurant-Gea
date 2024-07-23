@@ -17,10 +17,12 @@
     top: 13px;
 }
 input{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
     padding: 7px;
-    left: 41px;
-    top: 60px;
 }
 .dugme{
     position: relative;
@@ -40,7 +42,7 @@ input{
 .dugme:hover{
     opacity: .8 ;
 }
-img{
+.coverimg{
   position: fixed;
   width: 100%;
   height: 100%;
@@ -92,5 +94,31 @@ footer{
       left: 150px;
     }
     
+
+
+ }
+ @media only screen and (max-width: 768px){
+    .forma{
+        width: 100%; /* Adjust the width as needed */
+       top: 190px;
+        margin: 0 auto; /* Center horizontally */
+        padding: 0; /* Optional padding for spacing */
+        background-color: rgba(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
+
+    }
+   
+   
+  input{
+    border-radius: 15px;
+  border: 2px solid rgba(255, 106, 0, 0.865);
+  max-width: 300px;
+  }
+
+
+
+
+
  }
 

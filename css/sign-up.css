@@ -16,11 +16,14 @@
     top: 13px;
 }
 input{
-    position: relative;
-    padding: 7px;
-    left: 41px;
-    
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 7px;
 }
+
 .dugme{
     position: relative;
     width: 415px;
@@ -39,12 +42,12 @@ input{
 .dugme:hover{
     opacity: .8 ;
 }
-img{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
+.coverimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
 footer{
     position: relative;
     top: 130px;
@@ -56,7 +59,7 @@ footer{
    text-align: center;
 }
 .unos{
-    width: 201px;
+    width: 405px;
 }
 .unoss{
     width: 405px;
@@ -65,19 +68,37 @@ footer{
 
 
 @media only screen and (max-width: 1400px){
-   .forma{
-    width: 400px;
-    height: 600px;
-   }
-   .unos{
-    width: 150px;
+    .forma{
+        width: 500px; 
+        height: auto; 
+    }
+    input{
+      max-width: 500px;
+      }
+      .dugme{
+        width: 305px;
+        bottom: 60px;
+    }
 }
-.unoss{
-    width: 305px;
-}
-.dugme{
-    width: 305px;
-    bottom: 60px;
-}
+@media only screen and (max-width: 768px){
+    .forma{
+        width: 100%; 
+        height: auto; 
+        background-color: rgb(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
 
-}
+
+    }
+   
+  input{
+    border-radius: 15px;
+    border: 2px solid rgba(255, 106, 0, 0.865);
+    max-width: 300px;
+  }
+
+ 
+    }
+
+
+ 

@@ -159,37 +159,41 @@
     position: relative;
     left: 85%;
     border: none;
+   
 }
-.nav-item{
+.nav-item, .logoham{
     display: none;
+    
+}
+.logoham{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 30px;
+    
+}
+
+.hamline{
+    
+    position: relative;
+    border-top: 3px solid white;
+    top: 90px;
 }
 
 @media only screen and (max-width: 1400px){
     .navbar-brand{
         left: 20px; /* Adjust left position for smaller screens */
     }
-   
     .vreme{
         right: 15px; /* Adjust right position for smaller screens */
     }
-    .navslika{
-        width: 250px;
-        height: 60px;
-    }
+   
     .navbar-brand{
         left: 103px;
     }
-    .korpa{
-        right: 420px;    
-    }
-    .korpa:before{
-        bottom: -22px;
-    }
-    .logout{
-        right: 305px;
-        top: 18px;
-    }
-   
+    
     }
 
 
@@ -208,6 +212,8 @@
     position: relative;
     left: 85%;
 }
+
+
 }
 
 
@@ -219,8 +225,18 @@
     .nav-item{
         display: block;
         position: relative;
-        left: 35%;
-        top: 45px;
+        left: 0px;
+        top: 60px;
+    }
+    .nav-link{
+        padding-left: 100px;     
+    }
+   .nav-link:hover{background-color: rgb(49, 49, 49);
+    
+}
+
+    .logoham{
+        display: block;
     }
     .navbar-nav{
         position: relative;
@@ -237,11 +253,17 @@
     .navbar-navvv{
         right: 415px;
     }
-    .navbar-navvvv{
-        right: 505px;  
-    }
+
     .navbar-navvvvv{
         right: 113px;
     }
-   
+   .logout{
+     right: 320px;
+   }
+   .korpa{
+    right: 420px;
+   }
+  #home{
+    right: 510px;
+  }
 }

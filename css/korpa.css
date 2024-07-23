@@ -2,13 +2,17 @@
 .naslov_forme{
     position: relative;
     text-align: center;
-    top: 13px;
+    
 }
 input{
-    position: relative;
-    padding: 7px;
-    left: 41px;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 7px;
+        top: 50px;
+    }
 .dugme{
     position: relative;
     width: 415px;
@@ -25,39 +29,43 @@ input{
     color: rgba(255, 106, 0, 0.865);
     font-weight: bold;
 }
-.pozadina{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
+.coverimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
 footer{
     position: relative;
     top: 259px;
 }
 .forma1{
    position: relative;
-    width: 950px;
+    width: 450px;
     height: 550px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(237, 237, 237);
     border: 3px solid rgba(255, 106, 0, 0.865);
     display: inline-block;
     box-shadow: 3px 3px 10px black;
-    top: 80px;
+    top: -20px;
     left: 350px;
+    
 
 }
 .naruceno{
     position: relative;
     width: 450px;
     height: 450px;
-    left: 480px;
-    bottom: 400px;
+    left: 850px;
+    bottom: 568px;
 
+}
+.countbackg{
+    background-color: rgb(251, 177, 40, .82);
 }
 .kolicina{
     position: relative;
@@ -100,11 +108,14 @@ tr{
     width: 55px;
 }
 .kupacinfo{
+    position: relative;
     width: 405px;
+    top: 60px;
 }
 .emailtel{
     width: 201px ;
 }
+
 
 @media only screen and (max-width: 1400px){
   .forma1{
@@ -128,4 +139,69 @@ tr{
     right: -20px;
     
 }
+}
+@media only screen and (max-width: 991px){
+    .logout{display: none;}
+
+}
+@media only screen and (max-width: 768px){
+    .logout{display: none;}
+
+.forma1{
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Let height adjust automatically */
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    top: -290; /* Reset top position */
+    left: 0; /* Reset left position */
+    position: relative; /* Reset position to default */
+    background-color: rgb(237, 237, 237, .0);
+    border: none;
+    box-shadow: none;
+    
+
+
+}
+input{
+    border-radius: 15px;
+    border: 2px solid rgba(255, 106, 0, 0.865);
+    max-width: 300px;
+
+}
+
+ .forma1{
+        width: 100%; /* Adjust width as needed */
+        height: auto; /* Let height adjust automatically */
+        margin: 50px auto; /* Center the form vertically and horizontally */
+        top: -290; /* Reset top position */
+        left: 0; /* Reset left position */
+        position: relative; /* Reset position to default */
+        background-color: rgb(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
+
+
+    }
+  
+    form#narucilac {
+            margin: 0 auto; /* This centers the form horizontally */
+            width: 90%; /* Adjust width as needed */
+            max-width: 400px; /* Adjust max-width as needed */
+          
+    }
+    
+    .naruceno{
+        position: relative;
+        left: 1%;
+        top: -330px;
+        max-width: 320px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .naslov_forme{
+        top: -200px;
+    }
+    .dugme{
+        top: 200px;
+    }
 }

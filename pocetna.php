@@ -34,9 +34,25 @@ if(!isset($_SESSION['korisnik'])){
       
       <button type="submit" class="logout" value="Logout">Logout</button>
 </form>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
+      <a class="navbar-navvvv" href="pocetna.php" id="home"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pocetna.php"><i class="fa-solid fa-house"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+                </li>
+            </ul>
+        </div>
   </div>
 </nav>
 
@@ -44,23 +60,13 @@ if(!isset($_SESSION['korisnik'])){
 <div class="apsclass"></div>
 <div class="container text-center">
   <a href="predjela.php">
-  <div class="menii">
-    <p class="naslovv"> <b> Predjela <b></p>
+  <div class="menii">  
   <div class="row">
     <div class="col">
       <img src="img/3-Ingredient-Appetizers-38e65f4cf4d04135b26c591181f854d4.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/cold-appetizers-cat.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-    <img src="img/331244_slanirolatshutterstock-1209091720_ff.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/dsc_0275a.jpg" alt="" class="slikaa">
+      <p class="naslovv"> <b> Predjela <b></p>
     </div>
   </div>
-  
 </div>
 </div>
 </a>
@@ -68,20 +74,11 @@ if(!isset($_SESSION['korisnik'])){
 <div class="apsclass"></div>
 <div class="container text-center">
   <a href="glavnajela.php">
-  <div class="menii">
-    <p class="naslovv"> <b> Glavna jela <b></p> 
+  <div class="menii"> 
 <div class="row">
     <div class="col">
       <img src="img/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/umk8i7ko_pasta_625x300_01_April_21.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-    <img src="img/default-pasta.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/FRESH_PA_i1140.jpg" alt="" class="slikaa">
+      <p class="naslovv"> <b> Glavna jela <b></p>
     </div>
   </div>
 </div>
@@ -92,22 +89,12 @@ if(!isset($_SESSION['korisnik'])){
 <div class="container text-center">
   <a href="pica.php">
   <div class="menii">
-    <p class="naslovv"> <b> Pića <b></p>
   <div class="row">
     <div class="col">
       <img src="img/pexels-photomix-company-96974.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/TOH-coffee-vs-espresso-GettyImages-1413384122-JVedit.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-    <img src="img/water-quality-banner.jpg" class="slikaa" alt="">
-    </div>
-    <div class="col">
-      <img src="img/What-is-Alcohol-by-Volume-or-ABV.jpg" alt="" class="slikaa">
+      <p class="naslovv"> <b> Pića <b></p>
     </div>
   </div>
-  
 </div>
 </div>
 </a>

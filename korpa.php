@@ -80,9 +80,8 @@ if ($konekcija->query($sql) === TRUE) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
-    <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>"> 
-    
     <link rel="stylesheet" href="css/korpa.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     
     <title>Korpa</title>
@@ -98,28 +97,30 @@ if ($konekcija->query($sql) === TRUE) {
       <form action="logout.php">
       <button type="submit" class="logout" value="Logout">Logout</button>
 </form>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
+      <a class="navbar-navvvv" href="pocetna.php" id="home"> <i class="fa-solid fa-house"  style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
   </div>
 </nav>
 
-<img class="pozadina" src="img/dish-restaurant-dining-food-wallpaper.jpg" alt="">
+<img class="coverimg" src="img/dish-restaurant-dining-food-wallpaper.jpg" alt="Background image">
+
+<h2 class="naslov_forme"> <b>Checkout</b></h2> <br><br>
 
 <div class="forma1">
 
-    <h2 class="naslov_forme"> <b>Podaci za račun</b></h2> <br><br>
       <form id="narucilac" action="korpa.php" method="post" enctype='multipart/form-data'>
-            <input type="text" placeholder="Ime i prezime" name="imeipre"  id="ime_prezime" class="kupacinfo" > <br> <br>
-            <input type="text" placeholder="Adresa za slanje" name="adresa"  id="adresa" class="kupacinfo"> <br><br>
-            <input type="text" placeholder="Grad" name="grad"  id="grad" class="kupacinfo"> <br><br>
-            <input type="text" placeholder="Poštanski broj" name="posta"  id="posta" class="kupacinfo"> <br><br>
-            <input type="email" placeholder="email"  name="email" id="imejl" class="emailtel"> 
-            <input type="text" placeholder="Telefon" name="telefon"  id="telefon" class="emailtel">
-            <br><br><br>
+            <input type="text" placeholder="Ime i prezime" name="imeipre"  id="ime_prezime" class="kupacinfo" > <br> 
+            <input type="text" placeholder="Adresa za slanje" name="adresa"  id="adresa" class="kupacinfo"> <br>
+            <input type="text" placeholder="Grad" name="grad"  id="grad" class="kupacinfo"> <br>
+            <input type="text" placeholder="Poštanski broj" name="posta"  id="posta" class="kupacinfo"> <br>
+            <input type="email" placeholder="email"  name="email" id="imejl" class="kupacinfo"> <br>
+            <input type="text" placeholder="Telefon" name="telefon"  id="telefon" class="kupacinfo">
+            <br><br>
             <input type="button" name="submit" id="submit"  class="dugme"  value="Naruči" onclick="posalji()">
-
-
+    </form>
+</div>
+ <div class="vertikalna_linija"></div>
 
 <div class="naruceno">
     <table class="table" id="stablo">
@@ -130,55 +131,36 @@ if ($konekcija->query($sql) === TRUE) {
       <td>Ukloni</td>
      </tr>
     </table>
-    <h5><b id="ukupno">Ukupno: <b id="ukupnoo"></b> </b>  </h5>
+   <div class="countbackg"> <h5><b id="ukupno">Ukupno: <b id="ukupnoo"></b> </b>  </h5></div>
     </div>
 
-    
-    </form>
- 
-    
-    <div class="vertikalna_linija"></div>
-   
-
-</div>
 
 <footer>
-  <div class="container text-center">
+<div class="container text-center">
     <div class="row">
-     <div class="col">
-     <p> <a class="footer-brand" href="pocetna.php"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a></p>
-      <br> <br><br>
+     <div class="col-sm">
+     <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
+      <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
-      <br> <br>
+      <br>
       <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
-      <br><br>
+      <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
-      <br> <br>
+      <br> 
       <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
-      <i class="fa-regular fa-copyright" style="color: #ffffff;"></i> <i class="autor">Sva prava su zadržana. Aleksandar Simić 2023</i>
-      
      </div>
-      <div class="col">
+      <div class="col-sm">
      <p class="foonas"> <b>RADNO VREME</b></p>
-     <br><br><br><br><br>
+     <br><br>
      <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
-     <br> 
+     <br>
      <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
-     
-       <div class="drumrezee">
+     <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
-    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a> 
-     </div>
-     </div>
-
- <div class="container text-center">
-    <div class="row">
-     <div class="col">
-    <hr class="footerlinija">
-    </div>
-    </div>
-   </div>
+    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
+     </div> 
+</div>
 </footer> 
 
 </body>

@@ -27,11 +27,9 @@
       <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
        <h6 class="vreme">  </h6>
-
-
-
        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+              <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
                 <li class="nav-item">
                     <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
                             style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
@@ -44,11 +42,14 @@
                     <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
                             style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
                 </li>
+                <hr class="hamline">
             </ul>
+            
         </div>
-
   </div>
+
 </nav>
+
 
 <div class="caros">
 
@@ -56,11 +57,7 @@
   <div class="row">
     <div class="col-sm">
     <div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"  class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"  aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"  aria-label="Slide 3"></button>
-  </div>
+  
   <div class="carousel-inner">
     <div class="carousel-item active">
 
@@ -120,7 +117,6 @@
 </div>
 
 </div>
-
 
 
 
@@ -315,3 +311,5 @@
    
   });
 </script>
+
+
