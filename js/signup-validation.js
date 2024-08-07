@@ -7,7 +7,7 @@ function validacija(){
       lozinkaaa=document.getElementById("lozinkaa").value;
       godineee=document.getElementById("godinee").value;
       
-    if(imeee==='' || imeee===null && prezimeee==='' || prezimeee===null && emailll==='' || emailll===null &&kor_imeee==='' || kor_imeee===null && lozinkaaa==='' || lozinkaaa===null && godineee==='' || godineee===null){
+    if(imeee==='' || imeee===null || prezimeee==='' || prezimeee===null || emailll==='' || emailll===null || kor_imeee==='' || kor_imeee===null || lozinkaaa==='' || lozinkaaa===null || godineee==='' || godineee===null){
       alert("Morate uneti sva polja!");
       document.getElementById("uzbuna").style.display="block"; 
       document.getElementById("uspeh").style.display="none";

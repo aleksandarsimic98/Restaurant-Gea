@@ -1,6 +1,24 @@
 body{
     background-color: rgb(248, 248, 248);
+    font-family: cursive;
+    font-weight: 500;
+    font-size: medium;
+  
 }
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 145, 0);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    border: 1px solid black;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+  }
+
 .dobrodoslica{
     text-align: center;
     padding-top: 150px;
@@ -18,15 +36,23 @@ body{
     bottom: auto;
     top: 170px;
     text-align: justify;
+    background-color: rgb(251, 177, 40, .7);
+    font-family: cursive;
+    font-weight: 500;
+    font-size: large;
 }
 .burger_naslov{
     position: relative;
     text-align: left;
     top: 150px;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
 }
 .burger_naslov2{
     position: relative;
     text-align: right;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
 }
 .tekst2{
     position: relative;
@@ -35,9 +61,16 @@ body{
     bottom: auto;
     text-align: justify;
     top: 25px;
+    background-color: rgb(251, 177, 40, .7);
+    font-family: cursive;
+    font-weight: 500;
+    font-size: large;
 }
 .card{
     box-shadow: 3px 3px 10px black;
+    font-family: cursive;
+    font-weight: 500;
+    font-size: large;
 }
 .card:hover{
     transform: scale(1.1);
@@ -78,12 +111,14 @@ body{
     font-style: italic;
     position: relative;
     top: 195px;
+    
 }
 .headingprod{
     text-align: center;
     padding-bottom: 50px;
     font-weight: bold;
     font-style: italic;
+    text-decoration: underline solid rgb(251, 177, 40);
 }
 .caros{
     background-color: rgb(251, 177, 40);
@@ -168,6 +203,7 @@ body{
     }
     .tekst{
         top: -60px; 
+
     }
 .burger_prez {
     width: 250px;
@@ -187,6 +223,7 @@ body{
 }
 .text{
     top: -60px;
+    background-color: rgb(251, 177, 40, .7);
 }
 #carimg{
     width: 300px;
@@ -194,5 +231,6 @@ body{
 }
 #carouselExampleCaptions{
     top: 170px;
+   
 }
 }

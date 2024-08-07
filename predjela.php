@@ -39,29 +39,44 @@ if(!isset($_SESSION['korisnik'])){
       <h6 class="vreme">  </h6>
       <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
-                </li>
-                <li class="nav-item">
+              <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
+              <li class="nav-item">
                     <a class="nav-link" href="pocetna.php"><i class="fa-solid fa-house"
                             style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="korpa.php"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i>
+                           <b style="color: #ffffff;"><i>Cart</i></b></a>
+                </li>
+                
+                <li class="nav-item">
+               <a  class="nav-link" href="logout.php"> <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180" 
+                            style="color: #ffffff;"></i> <b> Logout</b> </a>
+                </li>
+                <hr class="hamline">
+                <li class="nav-item">
+                <a class="tele" href=""> <i class="fa-solid fa-phone" 
+                            style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Mon-Fri..................09h-23h</b></p>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
+                </li>
+                
             </ul>
+            
         </div>
   </div>
 </nav>
 
 <div class="predjelo">
     <img src="img/exquisite-cover.jpg" alt="" class="predjelosl">
-    <h1 class="naslovpre"> <b><i> Predjela</b></i> </h1>
+    <h1 class="naslovpre"> <b><i> Appetizers</b></i> </h1>
 </div>
 
-<h1 class="naslovpred"> <b> <i> Ovde mozete naručiti predjelo <br> spremljeno samo za Vas</b></i> </h1>
+<h1 class="naslovpred"> <b> <i> Here you can order the appetizers <br> Made only for you</b></i> </h1>
 
 <?php
 include_once("connection.php");       //connection to the DB
@@ -109,8 +124,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatprvopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatprvopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatprvopredejloo['cena'] . "RSD</h4>   </p>" ?>
-  <a href='#' class='btn btn-primary' onclick=prvakartica()>  <b>Dodaj u korpu</b> </a>
+  <?php  echo "<h4>Price:" .  $rezultatprvopredejloo['cena'] . "USD</h4>   </p>" ?>
+  <a href='#' class='btn btn-primary' onclick=prvakartica()>  <b>Add to Cart</b> </a>
    
   </div>
 </div>
@@ -121,8 +136,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatdrugopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatdrugopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatdrugopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=drugakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatdrugopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=drugakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -132,8 +147,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .   $rezultattrecepredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ".  $rezultattrecepredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .   $rezultattrecepredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary " onclick=trecakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .   $rezultattrecepredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary " onclick=trecakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -143,8 +158,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatcetvrtopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatcetvrtopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatcetvrtopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=cetvrtakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatcetvrtopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=cetvrtakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -161,8 +176,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatpetopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatpetopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatpetopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=petakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatpetopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=petakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -172,8 +187,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatsestopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatsestopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatsestopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=sestakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatsestopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=sestakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -183,8 +198,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " . $rezultatsedmopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatsedmopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatsedmopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=sedmakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatsedmopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=sedmakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -194,8 +209,8 @@ include_once("connection.php");       //connection to the DB
   <div class="card-body">
   <?php echo "   <h5 class='card-title'>   " .  $rezultatosmopredejloo['naziv'] . "    </h5>   "  ?> 
   <?php echo " <p class='card-text'> ". $rezultatosmopredejloo['tekst'] ." <br> " ?>
-  <?php  echo "<h4>Cena:" .  $rezultatosmopredejloo['cena'] . "RSD</h4>   </p>" ?>
-    <a href="#" class="btn btn-primary" onclick=osmakartica()><b>Dodaj u korpu</b></a>
+  <?php  echo "<h4>Price:" .  $rezultatosmopredejloo['cena'] . "USD</h4>   </p>" ?>
+    <a href="#" class="btn btn-primary" onclick=osmakartica()><b>Add to Cart</b></a>
   </div>
 </div>
     </div>
@@ -211,18 +226,18 @@ include_once("connection.php");       //connection to the DB
       <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
       <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
       <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
      </div>
       <div class="col-sm">
-     <p class="foonas"> <b>RADNO VREME</b></p>
+     <p class="foonas"> <b>WORKING TIME</b></p>
      <br><br>
-     <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
+     <p class="kon"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
      <br>
-     <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
+     <p class="kon"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
      <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
@@ -249,10 +264,10 @@ function prvakartica(){
   console.log(cenaprvi);
   localStorage.setItem('cenaprvii', cenaprvi);            //1. card 
 if (nazivprvi, cenaprvi){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -265,10 +280,10 @@ function drugakartica(){
   console.log(cenadrugi);
   localStorage.setItem('cenadrugii', cenadrugi);            //2. card 
 if (nazivdrugi, cenadrugi){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -281,10 +296,10 @@ function trecakartica(){
   console.log(cenatreci);
   localStorage.setItem('cenatrecii', cenatreci);            //3. card 
 if (nazivtreci, cenatreci){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -297,10 +312,10 @@ function cetvrtakartica(){
   console.log(cenacetvrti);
   localStorage.setItem('cenacetvrtii', cenacetvrti);            //4. card 
 if (nazivcetvrti, cenacetvrti){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -314,10 +329,10 @@ function petakartica(){
   console.log(cenapeti);
   localStorage.setItem('cenapetii', cenapeti);            //5. card 
 if (nazivpeti, cenapeti){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -330,10 +345,10 @@ function sestakartica(){
   console.log(cenasesti);
   localStorage.setItem('cenasestii', cenasesti);            //6. card 
 if (nazivsesti, cenasesti){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -346,10 +361,10 @@ function sedmakartica(){
   console.log(cenasedmi);
   localStorage.setItem('cenasedmii', cenasedmi);            //7. card 
 if (nazivsedmi, cenasedmi){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }
@@ -361,10 +376,10 @@ function osmakartica(){
   console.log(cenaosmi);
   localStorage.setItem('cenaosmii', cenaosmi);            //8. card 
 if (nazivosmi, cenaosmi){
-  alert("Proizvod je dodat u korpu!");
+  alert("The product has been added to your cart.");
 }
 else{
-  alert("Proizvod nije dodat u korpu!");
+  alert("The product was not added to your cart.");
 }
   return false;
 }

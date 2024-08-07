@@ -40,7 +40,7 @@ if(isset($_POST['poslato'])){
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/admin.css?v=<?php echo time();?>"> 
-    <title>Admin Naruceno</title>
+    <title>Admin Orders</title>
 </head>
 <body>
 
@@ -51,18 +51,18 @@ if(isset($_POST['poslato'])){
       <span class="navbar-toggler-icon"></span>
       
     </button>
-      <a class="navbar-navv" href="naruceno.php"> <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>NARUČENO</b></i> </a>
+      <a class="navbar-navv" href="naruceno.php"> <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>Orders</b></i> </a>
       
-      <a class="navbar-navvvv" href="admin.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>KORISNICI</b></i> </a>
+      <a class="navbar-navvvv" href="admin.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Users</b></i> </a>
       <form action="logout.php">
-      <button type="submit" class="logout" value="Odjavi se" >Odjavi se</button>
+      <button type="submit" class="logout" value="Logout" >Logout</button>
 </form>
 <h6 class="vreme">  </h6>
   </div>
 </nav>
 
 
-<h1 class="naslov_forme"><b><i>Naručeno</i></b></h1> <br>
+<h1 class="naslov_forme"><b><i>Orders</i></b></h1> <br>
 
 
 
@@ -71,15 +71,15 @@ if(isset($_POST['poslato'])){
      <div class="col">
 <table class="table">
   <th>Id</th>
-  <th>Ime i prezime</th>
-  <th>Adresa</th>
-  <th>Grad</th>
-  <th>Poštanski broj</th>
-  <th>Email</th>
-  <th>Telefon</th>
-  <th>Vreme naručivanja</th>
-  <th>Naručeni proizvodi</th>
-  <th>Ukupno</th>
+  <th>Name</th>
+  <th>Address</th>
+  <th>City</th>
+  <th>Post no</th>
+  <th>E-mail</th>
+  <th>Phone</th>
+  <th>Time of order</th>
+  <th>Ordered products</th>
+  <th>Count</th>
   <th></th>
 
 <?php
@@ -110,9 +110,9 @@ echo "
     <table class='table'>
         <thead>
           <tr>
-              <th scope='col'>Naziv</th>
-              <th scope='col'>kolicina</th>
-              <th scope='col'>Cena</th>
+              <th scope='col'>Product</th>
+              <th scope='col'>Quan.</th>
+              <th scope='col'>Price</th>
           </tr>";
           
           $upittt="SELECT * FROM porudzbina_stavkee WHERE id=$red[id]";
@@ -122,7 +122,7 @@ echo "
                   <tr>
                     <td>".  $redd["naziv"]  . "</td>
                     <td>". $redd["kolicina"] ."</td>
-                    <td>". $redd["cena"] .' ' . 'RSD'."</td>
+                    <td>". $redd["cena"] .' ' . 'USD'."</td>
                     <form action='naruceno.php' method='post'>
                     <input type='hidden' name='stavke' value='". $redd["id"] ."'>    
                     </form>
@@ -140,10 +140,10 @@ $rezultattt = mysqli_query($konekcija, $ukupno);
 while($rd=mysqli_fetch_assoc($rezultattt)){ 
 echo "
 
-<td>". $rd["ukupan_racun"]   . ' ' . 'RSD'. "</td>
+<td>". $rd["ukupan_racun"]   . ' ' . 'USD'. "</td>
 <form action='naruceno.php' method='post'>
    <input type='hidden' name='userr' value='". $red["id"] ."'>   
-  <th> <input type='submit' name='poslato' class='brisanje'  value='Poslato'></th>
+  <th> <input type='submit' name='poslato' class='brisanje'  value='Completed'></th>
 </form>
   </tr>
 
@@ -157,42 +157,31 @@ echo "
 </div>
 
 <footer>
-  <div class="container text-center">
+<div class="container text-center">
     <div class="row">
-     <div class="col">
-     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a> </p>
-      <br> <br><br>
+     <div class="col-sm">
+     <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
+      <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
-      <br> <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
-      <br><br>
+      <br>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
-      <br> <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
-      <i class="fa-regular fa-copyright" style="color: #ffffff;"></i> <i class="autor">Sva prava su zadržana. Aleksandar Simić 2023</i>
-      
+      <br> 
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
      </div>
-      <div class="col">
-     <p class="foonas"> <b>RADNO VREME</b></p>
-     <br><br><br><br><br>
-     <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
-     <br> 
-     <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
-     
-       <div class="drumrezee">
+      <div class="col-sm">
+     <p class="foonas"> <b>WORKING TIME</b></p>
+     <br><br>
+     <p class="kon"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
+     <br>
+     <p class="kon"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
+     <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
-    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a> 
-     </div>
-     </div>
-
- <div class="container text-center">
-    <div class="row">
-     <div class="col">
-    <hr class="footerlinija">
-    </div>
-    </div>
-   </div>
+    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
+     </div> 
+</div>
 </footer>  
 
 </body>

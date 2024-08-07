@@ -1,7 +1,7 @@
 .forma{
     position: relative;
     width: 500px;
-    height: 500px;
+    height: 400px;
     margin-top: 195px;
     margin-bottom: auto;
     margin-left: 200px;
@@ -14,7 +14,7 @@
 .naslov_forme{
     position: relative;
     text-align: center;
-    top: 13px;
+    top: 35px;
 }
 input{
     display: flex;
@@ -56,7 +56,10 @@ footer{
     text-align: center;
  }
  .unos{
+    position: relative;
+    top: 40px;
     width: 405px;
+
  }
  .noaccount{
     position: relative;

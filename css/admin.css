@@ -54,16 +54,10 @@
 footer{
     margin-top: 50px;
 }
-img{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+
 .navbar-navvvv{
     position: absolute;
-    right: 600px;
+    right: 500px;
 }
 .navbar-navvv{
     position: absolute;
@@ -95,10 +89,14 @@ img{
     color: rgba(255, 106, 0, 0.865);
 }
 
-@media only screen and (max-width: 1400px){
-    .logout {
-        right: 135px;
-       top: 17px;
+@media only screen and (max-width: 1199px){
+    .navbar-navv{
+        right: 370px;
     }
+
 }
 
+@media only screen and (max-width: 991px){
+ .logout{display: none;}
+
+}

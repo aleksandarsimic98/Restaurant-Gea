@@ -69,19 +69,33 @@
       <h6 class="vreme">  </h6>
       <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+              <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
+              <li class="nav-item">
+                    <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
                             style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
                 </li>
+                <hr class="hamline">
+                <li class="nav-item">
+                <a class="tele" href=""> <i class="fa-solid fa-phone" 
+                            style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Mon-Fri..................09h-23h</b></p>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
+                </li>
+                
             </ul>
+            
         </div>
   </div>
 </nav>
@@ -90,14 +104,14 @@
 
     <div class="forma">
 
-<h2 class="naslov_forme"> <b>Prijavite se ovde</b></h2> <br><br>
+<h2 class="naslov_forme"> <b>User Login</b></h2> <br><br>
 
 
 <form action="login.php" id="Iform" method="post">
-<input type="text" placeholder="Korisnicko ime" class="unos" name="kor_ime" id="username"> <br>
-<input type="password" placeholder="lozinka" class="unos" name="lozinka" id="password"> <br><br>
+<input type="text" placeholder="Username" class="unos" name="kor_ime" id="username"> <br>
+<input type="password" placeholder="Password" class="unos" name="lozinka" id="password"> <br><br>
  <br>
- <input class="dugme" type="submit" value="Prijavi me" name="posalji" > 
+ <input class="dugme" type="submit" value="Login" name="posalji" > 
  
 </form>
 
@@ -107,11 +121,11 @@
     <h2 class="naslov_forme"> <b>Admin Login</b></h2> <br><br>
 <form action="login.php" method="post">
 
-    <input type="text" placeholder="Korisnicko ime" class="unos" name="kor_ime_admin"> <br>
-    <input type="password" placeholder="lozinka" class="unos" name="lozinka_admin"> <br><br>
+    <input type="text" placeholder="Username" class="unos" name="kor_ime_admin"> <br>
+    <input type="password" placeholder="Password" class="unos" name="lozinka_admin"> <br><br>
     
      <br>
-     <input class="dugme" type="submit" value="Prijavi me"> 
+     <input class="dugme" type="submit" value="Login"> 
 </form>
 
 </div>
@@ -125,18 +139,18 @@
       <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
       <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
       <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
      </div>
       <div class="col-sm">
-     <p class="foonas"> <b>RADNO VREME</b></p>
+     <p class="foonas"> <b>WORKING TIME</b></p>
      <br><br>
-     <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
+     <p class="kon"><b>Monday - Friday:</b>  <br> <b>09:00h - 23:00h</b> </p>
      <br>
-     <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
+     <p class="kon"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
      <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 

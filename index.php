@@ -30,19 +30,30 @@
        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
-                <li class="nav-item">
-                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+              <li class="nav-item">
+                    <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
                             style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
-                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+                    <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                            style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
                 </li>
                 <hr class="hamline">
+                <li class="nav-item">
+                <a class="tele" href=""> <i class="fa-solid fa-phone" 
+                            style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Mon-Fri..................09h-23h</b></p>
+                </li>
+                <li class="nav-item">
+                  <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
+                </li>
+                
             </ul>
             
         </div>
@@ -124,7 +135,7 @@
 <div class="container text-center">
   <div class="row justify-content-center"> <!-- Center the column horizontally -->
     <div class="col-12 text-center"> <!-- Center the content inside the column -->
-      <img class="preliv" src="img/orange-color-paint-splash-isolated-on-transparent-background-ai-generative-png.png" alt="">
+      <img class="preliv" src="img/new.png" alt="">
     </div>
   </div>
 </div>
@@ -136,7 +147,7 @@
 
   include_once("connection.php");       //connection on DB
 
-  $prvakartica= "SELECT * FROM ponuda WHERE id=11";  
+  $prvakartica= "SELECT * FROM ponuda WHERE id=1";  
   $rezultaprvakartica= mysqli_query($konekcija, $prvakartica);            //1. card
   $rezultaprvakarticaa=mysqli_fetch_assoc($rezultaprvakartica);   /////////////////////////////////////////////////
 
@@ -208,29 +219,29 @@
 </div>
 </div>
 
-<div class="burger" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+<div class="burger">
 <div class="container text-center">
   <div class="row">
     <div class="col-md-6">
-      <img class="burger_prez" src="img/menuproduct_burger_cheeseburger.png" alt="">
+      <img class="burger_prez" src="img/menuproduct_burger_cheeseburger.png" alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
     </div>
     <div class="col-md-6">
-      <h2 class="burger_naslov"> <b>Burger</b> </h2>
-      <p class="tekst">Join us today and discover why our burgers have become a local favorite. Whether you're dining in with friends, grabbing a quick bite on the go, or ordering for delivery, [Your Restaurant Name] guarantees a burger experience like no other. Visit us at [Your Address] or order online for convenient pickup or delivery. Taste the difference quality makes—bite into perfection with every burger at [Your Restaurant Name].</p>
+      <h2 class="burger_naslov" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" > <b>Burger</b> </h2 >
+      <p class="tekst" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">Join us today and discover why our burgers have become a local favorite. Whether you're dining in with friends, grabbing a quick bite on the go, or ordering for delivery, Gea Restaurant guarantees a burger experience like no other. Visit us at [Your Address] or order online for convenient pickup or delivery. Taste the difference quality makes—bite into perfection with every burger at Gea Restaurant.</p>
     </div>
   </div>
 </div>
 </div>
 
-<div class="pasta" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+<div class="pasta">
   <div class="container text-center">
   <div class="row">
     <div class="col-md-6">
-      <h2 class="burger_naslov2"> <b>Pasta</b> </h2>
-      <p class="tekst2">At [Restaurant Name], we believe in the art of pasta-making, blending traditional techniques with innovative twists. Whether you're craving a comforting plate of handmade Tagliatelle or a vibrant seafood Spaghetti, our menu promises a delightful journey through Italian cuisine. Visit us to savor pasta perfection in [City], where every meal is a celebration of taste and quality.</p>
+      <h2 class="burger_naslov2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true"> <b>Pasta</b> </h2>
+      <p class="tekst2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">At [Restaurant Name], we believe in the art of pasta-making, blending traditional techniques with innovative twists. Whether you're craving a comforting plate of handmade Tagliatelle or a vibrant seafood Spaghetti, our menu promises a delightful journey through Italian cuisine. Visit us to savor pasta perfection in [City], where every meal is a celebration of taste and quality.</p>
     </div>
     <div class="col-md-6">
-      <img class="burger_prez2" src="img/pngimg.com - pasta_PNG102.png" alt="">
+      <img class="burger_prez2" src="img/pngimg.com - pasta_PNG102.png" alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
     </div>
   </div>
 </div>
@@ -244,18 +255,18 @@
       <br> <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
       <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
       <br>
       <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
      </div>
       <div class="col-sm">
-     <p class="foonas"> <b>RADNO VREME</b></p>
+     <p class="foonas"> <b>WORKING TIME</b></p>
      <br><br>
-     <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
+     <p class="kon"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
      <br>
-     <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
+     <p class="kon"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
      <hr>
     <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
     <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
