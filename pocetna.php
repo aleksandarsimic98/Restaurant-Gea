@@ -1,3 +1,4 @@
+
 <?php
 //if user is not logged in can't access to this page 
 session_start();
@@ -9,17 +10,18 @@ if(!isset($_SESSION['korisnik'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
-    <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
+    <title>Restoran Gea- Početna</title>
+
+        <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/pocetna.css?v=<?php echo time();?>">
-    <title>Restoran Gea- Početna</title>
+     <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
 </head>
 <body>
   
@@ -74,7 +76,7 @@ if(!isset($_SESSION['korisnik'])){
 
 <div class="apsclass"></div>
 <div class="container text-center">
-  <a href="predjela.php">
+  <a href="predjela.php" class="food">
   <div class="menii">  
   <div class="row">
     <div class="col">
@@ -88,7 +90,7 @@ if(!isset($_SESSION['korisnik'])){
 
 <div class="apsclass"></div>
 <div class="container text-center">
-  <a href="glavnajela.php">
+  <a href="glavnajela.php" class="food">
   <div class="menii"> 
 <div class="row">
     <div class="col">
@@ -100,9 +102,9 @@ if(!isset($_SESSION['korisnik'])){
 </div>
 </a>
   
-  <div class="apsclass"></div>
+<div class="apsclass"></div>
 <div class="container text-center">
-  <a href="pica.php">
+  <a href="pica.php" class="food">
   <div class="menii">
   <div class="row">
     <div class="col">
@@ -120,13 +122,13 @@ if(!isset($_SESSION['korisnik'])){
      <div class="col-sm">
      <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
       <br> <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Freedom boulevard 42 - Belgrade</b> </a>
       <br>
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/578-444</b> </a></p>
       <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>George Washington St. 112 - Belgrade</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/293-332</b> </a></p>
      </div>
       <div class="col-sm">
      <p class="foonas"> <b>WORKING TIME</b></p>

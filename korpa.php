@@ -145,7 +145,7 @@ if(null==!($imeiprezimee && $adresaa && $gradd && $postaa && $emaill && $telefon
 <div class="forma1">
 
       <form id="narucilac" action="korpa.php" method="post" enctype='multipart/form-data'>
-            <input type="text" placeholder="Name and Last Name" name="imeipre"  id="ime_prezime" class="kupacinfo" > <br> 
+            <input type="text" placeholder="First Name and Last Name" name="imeipre"  id="ime_prezime" class="kupacinfo" > <br> 
             <input type="text" placeholder="Address" name="adresa"  id="adresa" class="kupacinfo"> <br>
             <input type="text" placeholder="City" name="grad"  id="grad" class="kupacinfo"> <br>
             <input type="text" placeholder="Post No" name="posta"  id="posta" class="kupacinfo"> <br>
@@ -176,13 +176,13 @@ if(null==!($imeiprezimee && $adresaa && $gradd && $postaa && $emaill && $telefon
      <div class="col-sm">
      <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
       <br> <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Freedom boulevard 42 - Belgrade</b> </a>
       <br>
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/578-444</b> </a></p>
       <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>George Washington St. 112 - Belgrade</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/293-332</b> </a></p>
      </div>
       <div class="col-sm">
      <p class="foonas"> <b>WORKING TIME</b></p>

@@ -4,12 +4,13 @@
     height: 400px;
     margin-top: 195px;
     margin-bottom: auto;
-    margin-left: 200px;
+    margin-left: auto;
     margin-right: auto;
     background-color: rgb(237, 237, 237);
     border: 3px solid rgba(255, 106, 0, 0.865);
     display: inline-block;
     box-shadow: 3px 3px 10px black;
+    
 }
 .naslov_forme{
     position: relative;
@@ -76,8 +77,9 @@ footer{
     .forma{
         width: 400px;
         height: 400px;
-        margin-left: 180px;
-
+        
+        margin-left: auto;
+        margin-right: auto;
     }
     .dugme{
         width: 310px;
@@ -88,13 +90,14 @@ footer{
         top: 30px;
         
     }
-  
+   
  }
 
  @media only screen and (min-width: 1819px){
     .forma{
-      top: 100px;
-      left: 150px;
+      
+      margin-left: auto;
+      margin-right: auto;
     }
     
 
@@ -109,6 +112,8 @@ footer{
         background-color: rgba(237, 237, 237, .0);
         border: none;
         box-shadow: none;
+        margin-left: auto;
+        margin-right: auto;
 
     }
    
@@ -118,10 +123,10 @@ footer{
   border: 2px solid rgba(255, 106, 0, 0.865);
   max-width: 300px;
   }
-
-
-
-
-
  }
-
+ @media only screen and (max-width: 991px){
+    .forma{
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }

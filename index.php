@@ -52,13 +52,10 @@
                 </li>
                 <li class="nav-item">
                   <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
-                </li>
-                
-            </ul>
-            
+                </li>  
+            </ul> 
         </div>
   </div>
-
 </nav>
 
 
@@ -169,7 +166,7 @@
   <h3 class="headingprod" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">Most Popular</h3>
   <div class="container text-center">
   <div class="row" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
-    <div class="col-md-3">
+    <div class="col-md">
     <div class="card" >
   <?php echo " <img src='uploads/"  . $rezultaprvakarticaa['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
@@ -182,7 +179,7 @@
   </div>
 </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md">
     <div class="card" >
     <?php echo " <img src='uploads/"  . $rezultadrugakarticaa['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
@@ -193,7 +190,7 @@
   </div>
 </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md">
     <div class="card" >
     <?php echo " <img src='uploads/"  . $rezultatrecakarticaa['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
@@ -204,7 +201,7 @@
   </div>
 </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md">
     <div class="card" >
     <?php echo " <img src='uploads/"  . $rezultacetvrtakarticaa['fotografija'] ." ' class='card-img-top' alt='...'> " ?>
   <div class="card-body">
@@ -233,6 +230,32 @@
 </div>
 </div>
 
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md">
+      <div class="info" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+              <h3 class="infohead">ABOUT US</h3>
+              <p class="descr">
+              Welcome to Gea, where every dish is a celebration of fresh, locally-sourced ingredients. Experience exceptional dining with our diverse menu, crafted to delight your palate and elevate your culinary adventure.
+              </p>
+              <h4 class="location">ON TWO LOCATIONS</h4>
+              <a target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9">  <h4 class="loc"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Freedom boulevard 42, Belgrade </h4> </a>   <br>
+              <a href="tel:011578444"><h4 class="pho"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 011/578-444</h4></a>    
+              <hr class="line">
+              <a target="_blank" href="https://maps.app.goo.gl/VrrB7as42WgE73q97">  <h4 class="loc2"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> George Washington St. 112, Belgrade </h4> </a>   <br>
+              <a href="tel:011293332"><h4 class="pho2"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 011/293-332</h4></a>          
+      </div>
+    </div>
+    <div class="col-md">
+    <div class="picinfo">
+        <img class="pic" src="img/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg" alt="picinfo" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+    </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="pasta">
   <div class="container text-center">
   <div class="row">
@@ -253,13 +276,13 @@
      <div class="col-sm">
      <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
       <br> <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Freedom boulevard 42 - Belgrade</b> </a>
       <br>
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/578-444</b> </a></p>
       <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>George Washington St. 112 - Belgrade</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/293-332</b> </a></p>
      </div>
       <div class="col-sm">
      <p class="foonas"> <b>WORKING TIME</b></p>

@@ -3,9 +3,7 @@ footer{
     background-color: rgb(111, 110, 110);
     border-top: 3px solid rgba(255, 106, 0, 0.865);
     border-bottom: 3px solid rgba(255, 106, 0, 0.865);
-    position: relative;
-    bottom: 0;
-   
+    margin-top: auto;
 }
 .foonas{
     color: white;

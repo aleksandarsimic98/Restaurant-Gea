@@ -55,6 +55,117 @@
     right: 610px;
 }
 
+
+@media only screen and (max-width: 1400px){
+ 
+    .caros{
+        height: 710px;
+    }
+    .preliv{
+        width: 700px;
+        height: 150px;
+        top: -120px;
+    }
+    #carouselExampleCaptions{
+        top: 140px;
+    }
+    .text{
+        top: 150px;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .burger_prez2{
+       
+        top: 50px;
+        width: 380px;
+        height: 350px;
+    }
+   
+}
+@media only screen and (max-width: 991px){
+   
+    .burger_prez {
+        position: relative;
+        top: 120px;
+        width: 350px;
+        height: 400px;
+        
+    }
+    .burger_prez2{
+        position: relative;
+        top: 50px;
+        width: 350px;
+        height: 300px;
+    }
+    .text{
+        position: relative;
+        top: 20px;
+    }
+    #carouselExampleCaptions{
+        top: 190px;
+    }
+    .burger{
+        position: relative;
+        top: -120px;
+    }
+   .pasta{
+    position: relative;
+    top: 60px;
+    
+   }
+   
+}
+@media only screen and (max-width: 768px){ 
+    .card {
+        width: 16rem; 
+        margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .burger_naslov{
+        top: -60px;
+    }
+    .tekst{
+        top: -60px; 
+
+    }
+.burger_prez {
+    width: 250px;
+    height: 300px;
+    top: 0px;
+}
+.burger_prez2{
+    width: 250px;
+    height: 200px;
+    top: 30px;
+
+}
+.preliv{
+    width: 300px;
+    height: 80px;
+    top: -80px;    
+}
+.text{
+    top: -60px;
+    background-color: rgb(251, 177, 40, .7);
+}
+#carimg{
+    width: 300px;
+    height: 300px;
+}
+#carouselExampleCaptions{
+    top: 170px;
+   
+}
+.burger{
+    top: 0px;
+}
+.pasta{
+    top: -40px;
+}
+}
+
 @media only screen and (max-width: 991px){
     .korpa, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme
     {

@@ -53,7 +53,7 @@ footer{
     display: inline-block;
     box-shadow: 3px 3px 10px black;
     top: 90px;
-    left: 350px;
+    left: -20%;
     
 
 }
@@ -61,7 +61,7 @@ footer{
     position: relative;
     width: 450px;
     height: 450px;
-    left: 850px;
+    left: 50%;
     bottom: 568px;
     top: -460px;
 
@@ -142,10 +142,38 @@ tr{
     
 }
 }
-@media only screen and (max-width: 991px){
-    .logout{display: none;}
-
+@media only screen and (max-width: 1300px){
+   
+   
+    .forma1{
+        width: 100%; /* Adjust width as needed */
+        height: auto;
+        margin: 50px auto; /* Center the form vertically and horizontally */
+        top: 0px; /* Reset top position */
+        left: 0; /* Reset left position */
+        position: relative; /* Reset position to default */
+        background-color: rgb(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
+    }
+    input{
+        border-radius: 15px;
+        border: 2px solid rgba(255, 106, 0, 0.865);
+        max-width: 300px;
+    }
+    .naruceno{
+        position: relative;
+        left: 1%;
+        top: 30px;
+        max-width: 320px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
+
+
 @media only screen and (max-width: 768px){
     .logout{display: none;}
 
@@ -159,9 +187,6 @@ tr{
     background-color: rgb(237, 237, 237, .0);
     border: none;
     box-shadow: none;
-    
-
-
 }
 input{
     border-radius: 15px;
