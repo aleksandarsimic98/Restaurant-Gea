@@ -76,7 +76,7 @@ if(!isset($_SESSION['korisnik'])){
     <h1 class="naslovpre"> <b><i> Appetizers</b></i> </h1>
 </div>
 
-<h1 class="naslovpred"> <b> <i> Here you can order the appetizers <br> Made only for you</b></i> </h1>
+
 
 <?php
 include_once("connection.php");       //connection to the DB

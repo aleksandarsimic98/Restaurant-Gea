@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Restoran Gea</title>
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <title>Restoran Gea</title> 
 </head>
 <body>
   
@@ -58,7 +59,6 @@
   </div>
 </nav>
 
-
 <div class="caros">
 
 <div class="container text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
@@ -74,9 +74,9 @@
     <img id="carimg" src="img/carousel/dd3d416-326cc8e4-ec52-451f-bcd2-5fba96dea4b3.png" width="530px"  class="d-block w-100" alt="...">
     </div>
     <div class="col-sm">
-        <h5 class="text">First slide label</h5>
+        <h5 class="text">Fast Food</h5>
         <hr class="text">
-        <p class="text">Some representative placeholder content for the first slide.</p>
+        <p class="text">From 5 USD</p>
       
     </div>
   </div>
@@ -90,9 +90,9 @@
     </div>
     <div class="col-sm">
       
-    <h5 class="text">Second slide label</h5>
+    <h5 class="text">Breakfast</h5>
     <hr class="text">
-    <p class="text">Some representative placeholder content for the second slide.</p>
+    <p class="text">From 7 USD</p>
     </div>
   </div>
 
@@ -104,9 +104,9 @@
     <img id="carimg" src="img/carousel/coffeeand-croissants-breakfast-7g3c924j3r32w7h5.png" width="530px" class="d-block w-100" alt="...">
     </div>
     <div class="col-sm">
-    <h5 class="text">Third slide label</h5>
+    <h5 class="text">Coffee and Croissants</h5>
     <hr class="text">
-    <p class="text">Some representative placeholder content for the third slide.</p>
+    <p class="text">In Gea Restaurant you can enjoy in delicious Coffee and Croissants</p>
     </div>
   </div> 
     </div>
@@ -224,7 +224,7 @@
     </div>
     <div class="col-md-6">
       <h2 class="burger_naslov" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" > <b>Burger</b> </h2 >
-      <p class="tekst" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">Join us today and discover why our burgers have become a local favorite. Whether you're dining in with friends, grabbing a quick bite on the go, or ordering for delivery, Gea Restaurant guarantees a burger experience like no other. Visit us at [Your Address] or order online for convenient pickup or delivery. Taste the difference quality makes—bite into perfection with every burger at Gea Restaurant.</p>
+      <p class="tekst" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">Join us today and discover why our burgers have become a local favorite. Whether you're dining in with friends, grabbing a quick bite on the go, or ordering for delivery, Gea Restaurant guarantees a burger experience like no other. Visit us at 123 Main Street, New York or order online for convenient pickup or delivery. Taste the difference quality makes—bite into perfection with every burger at Gea Restaurant.</p>
     </div>
   </div>
 </div>
@@ -240,11 +240,11 @@
               Welcome to Gea, where every dish is a celebration of fresh, locally-sourced ingredients. Experience exceptional dining with our diverse menu, crafted to delight your palate and elevate your culinary adventure.
               </p>
               <h4 class="location">ON TWO LOCATIONS</h4>
-              <a target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9">  <h4 class="loc"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Freedom boulevard 42, Belgrade </h4> </a>   <br>
-              <a href="tel:011578444"><h4 class="pho"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 011/578-444</h4></a>    
+              <a target="_blank" href="https://maps.app.goo.gl/FPiw1Cva55NuBSjs9">  <h4 class="loc"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 123 Main Street, New York </h4> </a>   <br>
+              <a href="tel:011578444"><h4 class="pho"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 578-444</h4></a>    
               <hr class="line">
-              <a target="_blank" href="https://maps.app.goo.gl/VrrB7as42WgE73q97">  <h4 class="loc2"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> George Washington St. 112, Belgrade </h4> </a>   <br>
-              <a href="tel:011293332"><h4 class="pho2"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 011/293-332</h4></a>          
+              <a target="_blank" href="https://maps.app.goo.gl/VrrB7as42WgE73q97">  <h4 class="loc2"> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 456 Elm Street, New York </h4> </a>   <br>
+              <a href="tel:011293332"><h4 class="pho2"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> 293-332</h4></a>          
       </div>
     </div>
     <div class="col-md">
@@ -256,12 +256,104 @@
 </div>
 
 
+<div class="container section" id="gallery" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+            <div class="title-block">
+                <h1 class="section-title">Gallery</h1>
+            </div>
+            <div id="photo_gallery" class="list1">
+                <div class="row loadMore">
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-introspectivedsgn-4062272-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img class="galleryphoto" src="img/gallery/pexels-introspectivedsgn-4062272-short.jpg" alt="Diavola pizza">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-wewe-yang-2383099-4566718-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img class="galleryphoto" src="img/gallery/pexels-wewe-yang-2383099-4566718-short.jpg" alt="Capricciosa pizza">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-eliftekkaya-5616132-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-eliftekkaya-5616132-short.jpg" alt="dva parčeta pizze">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-vicky-2317542-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-vicky-2317542-short.jpg" alt="Pizza Shop Pančevo parče pizze 120 din.">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-wildlittlethingsphoto-3215513-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-wildlittlethingsphoto-3215513-short.jpg" alt="Đački sendvič">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-markus-winkler-1430818-19802119-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-markus-winkler-1430818-19802119-short.jpg" alt="Pizza Shop Pančevo lepinje za sednviče">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-farhad-8697543-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-farhad-8697543-short.jpg" alt="pizza peć na drva">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <a href="img/gallery/pexels-khoa-vo-2347168-5192030-short.jpg" class="block fancybox" data-lightbox="photos"> 
+                            <div class="content">
+                                <img src="img/gallery/pexels-khoa-vo-2347168-5192030-short.jpg" alt="Pizza Shop Pančevo mesta za sedenje">
+                                <div class="zoom">
+                                    <span class="zoom_icon"><i class="fa fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+
 <div class="pasta">
   <div class="container text-center">
   <div class="row">
     <div class="col-md-6">
       <h2 class="burger_naslov2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true"> <b>Pasta</b> </h2>
-      <p class="tekst2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">At [Restaurant Name], we believe in the art of pasta-making, blending traditional techniques with innovative twists. Whether you're craving a comforting plate of handmade Tagliatelle or a vibrant seafood Spaghetti, our menu promises a delightful journey through Italian cuisine. Visit us to savor pasta perfection in [City], where every meal is a celebration of taste and quality.</p>
+      <p class="tekst2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">At Gea, we believe in the art of pasta-making, blending traditional techniques with innovative twists. Whether you're craving a comforting plate of handmade Tagliatelle or a vibrant seafood Spaghetti, our menu promises a delightful journey through Italian cuisine. Visit us to savor pasta perfection in 456 Elm Street, New York, where every meal is a celebration of taste and quality.</p>
     </div>
     <div class="col-md-6">
       <img class="burger_prez2" src="img/pngimg.com - pasta_PNG102.png" alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
@@ -276,13 +368,13 @@
      <div class="col-sm">
      <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
       <br> <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Freedom boulevard 42 - Belgrade</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/FPiw1Cva55NuBSjs9"> <b>123 Main Street, New York</b> </a>
       <br>
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/578-444</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">578-444</b> </a></p>
       <br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>George Washington St. 112 - Belgrade</b> </a>
+      <a class="kon" target="_blank" href="https://maps.app.goo.gl/VrrB7as42WgE73q97"> <b>456 Elm Street, New York</b> </a>
       <br> 
-      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/293-332</b> </a></p>
+      <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">293-332</b> </a></p>
      </div>
       <div class="col-sm">
      <p class="foonas"> <b>WORKING TIME</b></p>
@@ -300,6 +392,9 @@
 
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+
   <script>
     AOS.init();
   </script>
