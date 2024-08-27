@@ -59,6 +59,7 @@ iframe{
 
 .drumreze:hover{
     background-color: gray;
+    transition: 0.5s;
 }
 .fa-brands{
     position: relative;

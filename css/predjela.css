@@ -71,4 +71,8 @@
     .naslovpred{
         margin-top: 100px;
     }
+    .card{
+        position: relative;
+        margin-top: 70px;
+    }
 }
