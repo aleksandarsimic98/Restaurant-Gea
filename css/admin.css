@@ -1,58 +1,8 @@
+/*-----------------------------------------
 
-.forma_dodaj{
-    position: relative;
-     width: 500px;
-     height: 650px;
-     background-color: rgb(237, 237, 237);
-     border: 3px solid rgba(255, 106, 0, 0.865);
-     display: inline-block;
-     box-shadow: 3px 3px 10px black;
-     margin-top: 50px;
- }
- .korisnici{
-    position: relative;
-     width: 1000px;
-     height: 650px;
-     background-color: rgb(237, 237, 237);
-     border: 3px solid rgba(255, 106, 0, 0.865);
-     display: inline-block;
-     box-shadow: 3px 3px 10px black;
-    
- }
- .form_stavka{
-    position: relative;
-    padding: 7px;
-    
-}
- .naslov_forme{
-    position: relative;
-    text-align: center;
-    top: 30px;
-    margin-top: 100px;
-    margin-bottom: 45px;
-}
-.dugme_dodaj{
-    position: relative;
-    width: 415px;
-    height: 43.5px;
-    border-radius: 60px;
-    background-color: rgba(255, 106, 0, 0.865);
-    border:3px solid rgba(255, 106, 0, 0.865);
-    font-weight: bold;
-    color: white;
-}
-.dugme_dodaj:hover{
-    background-color: white;
-    border:3px solid rgba(255, 106, 0, 0.865);
-    color: rgba(255, 106, 0, 0.865);
-}
+    Navbar For Admin Dashboard
 
-.dugme_dodaj:hover{
-    opacity: .8 ;
-}
-
-
-
+/*----------------------------------------*/
 .navbar-navvvv{
     position: absolute;
     right: 500px;
@@ -66,6 +16,41 @@
     right: 160px;
     top: 36px;
 }
+/*-----------------------------------------
+
+    Heading 
+
+/*----------------------------------------*/
+.heading{
+    position: relative;
+    text-align: center;
+    top: 30px;
+    margin-top: 100px;
+    margin-bottom: 45px;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
+}
+/*-----------------------------------------
+
+    Remove button
+
+/*----------------------------------------*/
+.remove{
+    font-weight: bold;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:2px solid rgba(255, 106, 0, 0.865);
+}
+.remove:hover{
+    background-color: white;
+    border:2px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+    transition: 0.5s;
+}
+/*-----------------------------------------
+
+    Logout button
+
+/*----------------------------------------*/
 .logout{
     position: absolute;
     right: 195px;
@@ -76,16 +61,6 @@
     background-color: rgba(255, 106, 0, 0.865);
     border:2px solid rgba(255, 106, 0, 0.865);
 }
-.brisanje{
-    font-weight: bold;
-    background-color: rgba(255, 106, 0, 0.865);
-    border:2px solid rgba(255, 106, 0, 0.865);
-}
-.brisanje:hover{
-    background-color: white;
-    border:2px solid rgba(255, 106, 0, 0.865);
-    color: rgba(255, 106, 0, 0.865);
-}
 
 @media only screen and (max-width: 1199px){
     .navbar-navv{
@@ -93,7 +68,6 @@
     }
 
 }
-
 @media only screen and (max-width: 991px){
  .logout{display: none;}
 

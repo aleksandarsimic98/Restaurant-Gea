@@ -8,11 +8,15 @@ if(!isset($_SESSION['admin'])){
 
 include_once("connection.php");       //connection to the DB 
 
-if (isset($_POST['remove'])) {
-    // Check if the 'izbrisi' button is clicked, then deleting the user
-    $idToDelete = $_POST['idToDelete'];
-    $deleteQuery = "DELETE FROM users WHERE id = $idToDelete";
-    mysqli_query($connection, $deleteQuery);
+// if button 'poslato' is set delete that row (from DB and also from admin page)
+if(isset($_POST['remove_button'])){
+  $delete_id=$_POST['userr'];
+  $delete_info="DELETE FROM order_info WHERE id=$delete_id";
+  mysqli_query( $connection,$delete_info);
+  $delete_ordered_products="DELETE FROM ordered_products WHERE id=$delete_id";
+  mysqli_query( $connection,$delete_ordered_products);
+  $delete_total="DELETE FROM total WHERE id=$delete_id";
+  mysqli_query( $connection,$delete_total);
 }
 ?>
 <!DOCTYPE html>
@@ -29,8 +33,8 @@ if (isset($_POST['remove'])) {
   <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
   <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
   <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
-  <link rel="stylesheet" href="css/admin.css?v=<?php echo time();?>">
-  <title>Restoran Gea Admin</title>
+  <link rel="stylesheet" href="css/admin.css?v=<?php echo time();?>"> 
+  <title>Admin Orders</title>
 </head>
 
 <!-- END head -->
@@ -58,57 +62,92 @@ if (isset($_POST['remove'])) {
 
 <!-- END Navbar -->
 
-<!-- BEGIN registered users list -->
+<h1 class="heading"><b><i>Orders</i></b></h1> <br>
 
-<h1 class="heading"><b> <i>Users</i> </b></h1> <br><br>
+
+<!-- BEGIN order -->
+
 <div class="container text-center">
   <div class="row">
     <div class="col">
       <table class="table">
         <th>Id</th>
         <th>Name</th>
-        <th>Last Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Post no</th>
         <th>E-mail</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>Age</th>
-        <th>Time</th>
-        <th>Remove</th>
+        <th>Phone</th>
+        <th>Time of order</th>
+        <th>Ordered products</th>
+        <th>Count</th>
+        <th></th>
         <?php
+        include_once("connection.php");       //connection to the DB 
 
-        include_once("connection.php");       //connection to the DB
-  
-        //writing the users from DB into table 
-        $query="SELECT * FROM users";
-        $result = mysqli_query($connection, $query);
-        while($row=mysqli_fetch_assoc($result)){
+        //getting everything from 'porudzbina_info' and 'porudzbina_stavkee' and insert that into html table
+        //to show details of purchaser and what is ordered
+        $query_info="SELECT * FROM order_info";
+        $result_info = mysqli_query($connection, $query_info);
+        while($row_info=mysqli_fetch_assoc($result_info)){
         echo "
-        <tbody>
-        <tr>
-        <th> ".  $row["id"]  . "</th>
-        <th>".  $row["first_name"]  . "</th>
-        <th>".  $row["second_name"]  . "</th>
-        <th>".  $row["email"]  . "</th>
-        <th>".  $row["username"]  . "</th>
-        <th>".  $row["psw"]  . "</th>
-        <th>".  $row["age"]  . "</th>
-        <th>".  $row["time_of_login"]  . "</th>
-  
-        <form action='admin.php' method='post'>
-        <input type='hidden' name='idToDelete' value='" . $row["id"] . "'>
-        <th> <input type='submit' name='remove' class='remove' value='Remove' onClick=remove()></th>
-        </form>
-        </tr>
-        </tbody>
-       " ;
-       }
-       ?>
+          <tbody>
+            <tr>
+            <td>".  $row_info["id"]  . "</td>
+            <td>".  $row_info["first_second_name"]  . "</td>
+            <td>".  $row_info["address_"]  . "</td>
+            <td>".  $row_info["city"]  . "</td>
+            <td>".  $row_info["post_no"]  . "</td>
+            <td>".  $row_info["email"]  . "</td>
+            <td>".  $row_info["phone"]  . "</td>
+            <td>".  $row_info["time_of_order"]  . "</td>
+            <td>
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th scope='col'>Product</th>
+                  <th scope='col'>Quan.</th>
+                  <th scope='col'>Price</th>
+                </tr>";
+                $query_ordered="SELECT * FROM ordered_products WHERE id=$row_info[id]";
+                $result_ordered = mysqli_query($connection, $query_ordered);
+                while($row_ordered=mysqli_fetch_assoc($result_ordered)){
+                 echo "
+                  <tr>
+                    <td>".  $row_ordered["product"]  . "</td>
+                    <td>". $row_ordered["quantity"] ."</td>
+                    <td>". $row_ordered["price"] .' ' . 'USD'."</td>
+                    <form action='admin_ordered.php' method='post'>
+                    <input type='hidden' name='stavke' value='". $row_ordered["id"] ."'>    
+                    </form>
+                  </tr>
+                ";
+                }  
+                echo"
+              </thead>
+            </table>
+            </td>
+            ";
+            $count="SELECT * FROM total WHERE id=$row_info[id]";
+            $result_count = mysqli_query($connection, $count);
+            while($row_count=mysqli_fetch_assoc($result_count)){ 
+            echo "
+            <td>". $row_count["total_count"]   . ' ' . 'USD'. "</td>
+            <form action='admin_ordered.php' method='post'>
+             <input type='hidden' name='userr' value='". $row_info["id"] ."'>   
+              <th> <input type='submit' name='remove_button' class='remove'  value='Completed'></th>
+            </form>
+            </tr>
+          </tbody>
+          " ;
+        }}
+        ?>
       </table>
     </div>
   </div>
 </div>
 
-<!-- END registered users list -->
+<!-- END order -->
 
 <!-- BEGIN footer -->
 
@@ -149,11 +188,4 @@ if (isset($_POST['remove'])) {
 <!-- END body -->
 
 </html>
-
-<script>
-// Alert if 'izbrisi' button is clicked 
-function remove(){
-   alert("User removed");
-}
-</script>
 <script type="text/javascript" src="js/time.js"></script> 

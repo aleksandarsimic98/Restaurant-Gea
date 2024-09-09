@@ -1,0 +1,202 @@
+
+.heading{
+    position: relative;
+    text-align: center;
+    top: 120px;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 7px;
+    top: 50px;
+    border: 1px solid rgba(255, 106, 0, 0.865);
+    }
+.button{
+    position: relative;
+    width: 415px;
+    border-radius: 60px;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:3px solid rgba(255, 106, 0, 0.865);
+    font-weight: bold;
+    color: white;
+}
+.button:hover{
+    opacity: .8 ;
+    background-color: white;
+    border:3px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+    font-weight: bold;
+    transition: 0.5s;
+}
+.coverimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+footer{
+    position: relative;
+    top: 259px;
+}
+.form{
+   position: relative;
+    width: 450px;
+    height: 550px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(237, 237, 237);
+    border: 3px solid rgba(255, 106, 0, 0.865);
+    display: inline-block;
+    box-shadow: 3px 3px 10px black;
+    top: 90px;
+    left: -20%;
+}
+.ordered{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    left: 50%;
+    bottom: 568px;
+    top: -460px;
+    
+
+}
+.count_background{
+    background-color: rgb(251, 177, 40, .82);
+}
+tr{
+    background-color: white;
+}
+.navbar-navvv{
+    position: absolute;
+    right: 500px;
+    color: black;
+    font-size: 18px;
+}
+
+.logout{
+    width: 110px;
+    height: 30px;
+}
+.remove{
+    font-weight: bold;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:1px solid rgba(255, 106, 0, 0.865);
+}
+.remove:hover{
+    background-color: white;
+    color: rgba(255, 106, 0, 0.865);
+    transition: 0.5s;
+}
+.number{
+    width: 55px;
+}
+.customer_info{
+    position: relative;
+    width: 405px;
+    top: 60px;
+}
+.emailtel{
+    width: 201px ;
+}
+#no_products{
+    text-align: center;
+    background-color: rgb(251, 177, 40, .82);
+}
+@media only screen and (max-width: 1400px){
+  .form{
+    width: 850px;
+    height: 450px;
+    left: 250px;
+  }
+  .ordered{
+    width: 350px;
+    height: 350px;
+    top: -340px;
+  }
+  input{
+    padding: 2px;
+  }
+  .button{
+    bottom: 20px;
+  }
+
+}
+@media only screen and (max-width: 1300px){
+    .form{
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    top: 0px; /* Reset top position */
+    left: 0; /* Reset left position */
+    position: relative; /* Reset position to default */
+    background-color: rgb(237, 237, 237, .0);
+    border: none;
+    box-shadow: none;
+    }
+    input{
+    border-radius: 15px;
+    border: 2px solid rgba(255, 106, 0, 0.865);
+    max-width: 300px;
+    }
+    .ordered{
+    position: relative;
+    left: 1%;
+    top: 30px;
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+@media only screen and (max-width: 768px){
+    .logout{display: none;}
+
+.form{
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    top: 0px; /* Reset top position */
+    left: 0; /* Reset left position */
+    position: relative; /* Reset position to default */
+    background-color: rgb(237, 237, 237, .0);
+    border: none;
+    box-shadow: none;
+}
+input{
+    border-radius: 15px;
+    border: 2px solid rgba(255, 106, 0, 0.865);
+    max-width: 300px;
+}
+    form#customer {
+    margin: 0 auto; /* This centers the form horizontally */
+    width: 90%; /* Adjust width as needed */
+    max-width: 400px; /* Adjust max-width as needed */
+          
+    }
+    .ordered{
+    position: relative;
+    left: 1%;
+    top: 30px;
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+     margin-right: auto;
+    }
+    .heading{
+    top: 120px;
+    }
+    .button{
+    top: 40px;
+    }
+}
+@media only screen and (max-width: 991px){
+.logout{display: none;}
+}

@@ -1,6 +1,6 @@
 <?php
-   $konekcija=mysqli_connect("localhost", "root", "", "restoran_gea");
-   if(!$konekcija){
+   $connection=mysqli_connect("localhost", "root", "", "restaurant_gea");
+   if(!$connection){
      echo ("Connection error");
      exit();
    }

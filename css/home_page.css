@@ -1,0 +1,75 @@
+.apsclass{
+    margin-top: 100px;
+}
+.menu{
+    position: relative;
+    top: 50px;
+    background-color: rgb(227, 227, 227);
+    height: 350px;
+    box-shadow: 5px 5px 10px black;
+    transition: transform 1.5s;
+}
+.menu:hover{
+    transform: scale(1.1);
+}
+.heading{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 110%; 
+    font-size: 22px;
+    color: black;
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    background-color: rgb(251, 177, 40, .6);
+}
+.image{
+    position: absolute; /* Position the image absolutely within .menii */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    object-fit: cover;
+    
+}
+footer{
+    margin-top: 100px;
+}  
+.navbar-navvv{
+    position: absolute;
+    right: 500px;
+    color: black;
+    font-size: 18px;
+}
+.navbar-navvvv{
+    right: 610px;
+}
+@media only screen and (max-width: 991px){
+    .cart, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme
+    {
+     display: none;
+    }
+}
+@media only screen and (max-width: 678px){
+    .cart, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme{display: none;}
+   .image{
+    position: absolute; /* Position the image absolutely within .menii */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    object-fit: cover;
+   }
+   .image:hover{
+    position: absolute; /* Position the image absolutely within .menii */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    object-fit: cover;
+   }
+}

@@ -1,30 +1,30 @@
 <?php
     // getting username and password into PHP variable
-    $kori_ime=filter_input(INPUT_POST, 'kor_ime');
-    $lozinkaa=filter_input(INPUT_POST, 'lozinka');
-    $kori_ime_admin=filter_input(INPUT_POST, 'kor_ime_admin');
-    $lozinka_admin=filter_input(INPUT_POST, 'lozinka_admin');
+    $user_username=filter_input(INPUT_POST, 'user_username');
+    $user_password=filter_input(INPUT_POST, 'user_password');
+    $admin_username=filter_input(INPUT_POST, 'admin_username');
+    $admin_password=filter_input(INPUT_POST, 'admin_password');
 
     include_once("connection.php");       //connection to the DB 
 
     // if enter username and password matches username and password from the database user is logged in
     
- if(null!==($kori_ime && $lozinkaa)){
-    $upit= "SELECT * FROM users WHERE korisnicko_ime= '$kori_ime' and lozinka='$lozinkaa'";
-    $rezultat= mysqli_query($konekcija, $upit);
-    $korisnik= mysqli_fetch_array($rezultat, MYSQLI_ASSOC);
-      if($korisnik){
+ if(null!==($user_username && $user_password)){
+    $query= "SELECT * FROM users WHERE username= '$user_username' and psw='$user_password'";
+    $user_result= mysqli_query($connection, $query);
+    $user= mysqli_fetch_array($user_result, MYSQLI_ASSOC);
+      if($user){
         session_start();
-         $_SESSION['korisnik'] = "yes";
-         header("Location: pocetna.php");
+         $_SESSION['user'] = "yes";
+         header("Location: home_page.php");
          die();
     }
  }
 
- if(null!==($kori_ime_admin && $lozinka_admin)){
-  $upitt= "SELECT * FROM adminn WHERE korisnicko_ime= '$kori_ime_admin' and lozinka='$lozinka_admin'";
-  $rezultatt= mysqli_query($konekcija, $upitt);
-  $admin= mysqli_fetch_array($rezultatt, MYSQLI_ASSOC);
+ if(null!==($admin_username && $admin_password)){
+  $admin_query= "SELECT * FROM adminn WHERE admin_username= '$admin_username' and psw='$admin_password'";
+  $admin_result= mysqli_query($connection, $admin_query);
+  $admin= mysqli_fetch_array($admin_result, MYSQLI_ASSOC);
     if($admin){
      session_start();
      $_SESSION['admin'] = "yes";
@@ -62,7 +62,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img class="navslika" src="img/0NqJfO-LogoMakr.png" alt=""></a>
+    <a class="navbar-brand" href="index.php"><img class="nav_image" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -104,17 +104,17 @@
 
 <!-- END Navbar -->
 
-  <img class="coverimg" src="img/dish-restaurant-dining-food-wallpaper-min.jpg" alt="">
+  <img class="coverimg" src="img/dish-restaurant-dining-food-wallpaper-min.jpg" alt="cover image">
 
 <!-- BEGIN User login form -->
 
-<div class="forma">
-  <h2 class="naslov_forme"> <b>User Login</b></h2> <br><br>
+<div class="form">
+  <h2 class="heading"> <b>User Login</b></h2> <br><br>
   <form action="login.php" id="Iform" method="post">
-    <input type="text" placeholder="Username" class="unos" name="kor_ime" id="username"> <br>
-    <input type="password" placeholder="Password" class="unos" name="lozinka" id="password"> <br><br>
+    <input type="text" placeholder="Username" class="enter" name="user_username" id="username"> <br>
+    <input type="password" placeholder="Password" class="enter" name="user_password" id="password"> <br><br>
     <br>
-    <input class="dugme" type="submit" value="Login" name="posalji" > 
+    <input class="button" type="submit" value="Login"> 
   </form>
 </div>
 
@@ -122,13 +122,13 @@
 
 <!-- BEGIN Admin login form -->
 
-<div class="forma">
-  <h2 class="naslov_forme"> <b>Admin Login</b></h2> <br><br>
+<div class="form">
+  <h2 class="heading"> <b>Admin Login</b></h2> <br><br>
   <form action="login.php" method="post">
-    <input type="text" placeholder="Username" class="unos" name="kor_ime_admin"> <br>
-    <input type="password" placeholder="Password" class="unos" name="lozinka_admin"> <br><br>
+    <input type="text" placeholder="Username" class="enter" name="admin_username"> <br>
+    <input type="password" placeholder="Password" class="enter" name="admin_password"> <br><br>
     <br>
-    <input class="dugme" type="submit" value="Login"> 
+    <input class="button" type="submit" value="Admin Login"> 
   </form>
 </div>
 
@@ -140,26 +140,27 @@
   <div class="container text-center">
     <div class="row">
      <div class="col-sm">
-        <p> <a class="footer-brand" href="index.php"><img class="navslikaa" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
+        <p> <a class="footer-brand" href="index.php"><img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
         <br> <br>
-        <a class="kon" target="_blank" href="https://maps.app.goo.gl/jBWd4Kxz4QDXiCZr9"> <b>123 Main Street, New York</b> </a>
+        <a class="address_and_number" target="_blank" href="https://maps.app.goo.gl/jBWd4Kxz4QDXiCZr9"> <b>123 Main Street, New York</b> </a>
         <br>
-        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">578-444</b> </a></p>
+        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="address_and_number">578-444</b> </a></p>
         <br>
-        <a class="kon" target="_blank" href="https://maps.app.goo.gl/qMntydyRixXXWLrs5"> <b>456 Elm Street, New York</b> </a>
+        <a class="address_and_number" target="_blank" href="https://maps.app.goo.gl/qMntydyRixXXWLrs5"> <b>456 Elm Street, New York</b> </a>
         <br> 
-        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">293-332</b> </a></p>
+        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="address_and_number">293-332</b> </a></p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.1770537226935!2d-73.83348987655775!3d40.762245923609576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2600f928bb159%3A0x939edd86cd71a6ef!2zMTIzIE1haW4gU3QsIEZsdXNoaW5nLCBOWSAxMTM1NCwg0KHRmNC10LTQuNGa0LXQvdC1INCU0YDQttCw0LLQtQ!5e0!3m2!1ssr!2srs!4v1725635944076!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-sm">
-        <p class="foonas"> <b>WORKING TIME</b></p>
+        <p class="working_time"> <b>WORKING TIME</b></p>
         <br><br>
-        <p class="kon"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
+        <p class="address_and_number"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
         <br>
-        <p class="kon"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
+        <p class="address_and_number"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
         <hr>
-        <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
-        <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
-        <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
+        <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="social_networks"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
+        <a target="_blank" href="https://www.instagram.com/"><div  class="social_networks"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
+        <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="social_networks"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
       </div> 
     </div>
   </div>
