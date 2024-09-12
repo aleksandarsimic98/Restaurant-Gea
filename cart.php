@@ -226,8 +226,6 @@ function updateTotal() {
     document.getElementById("zero_usd").style.display="none";
 }
 
-
-
 // Function to create a new row for an item
 function createItemRow(identifier, item, item_price, localStorage_product, localStorage_price) {
 
@@ -256,7 +254,7 @@ function createItemRow(identifier, item, item_price, localStorage_product, local
     updateTotal();
     sessionData['quan' + input.id] = x;
     var updated= updateTotal();
-    localStorage.setItem('totall', updated);     
+    localStorage.setItem('totall', updated); 
   };
 
   inputTd.appendChild(input);
@@ -270,6 +268,8 @@ function createItemRow(identifier, item, item_price, localStorage_product, local
   var button = document.createElement('button');
   button.textContent = "Remove";
   button.classList.add("remove");
+
+
   // if remove button is clicked, set data to null and remove localStorage for the row
   button.onclick = function() {
     item=null;
@@ -283,7 +283,6 @@ function createItemRow(identifier, item, item_price, localStorage_product, local
     if(count==0){
       document.getElementById("no_products").style.display="block";
     }
-
     };
   // appending remove button 
   buttonTd.appendChild(button);
@@ -291,14 +290,14 @@ function createItemRow(identifier, item, item_price, localStorage_product, local
   //if submit button is clicked send data to server side by JSON
   submit_button.addEventListener('click', function() {
   var product = item;
-  var price= item_price; 
+  var price= resultTd.textContent; 
   var quantity = sessionData['quan' + input.id] || 1;
   // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
   // Specify the PHP file that will handle the data
   var phpFile = 'cart.php';
   // Set up the POST request with the data
-  var data = JSON.stringify({ product: product, price: price, quantity: quantity});
+  var data = JSON.stringify({ product: product, price:price, quantity: quantity});
   xhr.open('POST', phpFile, true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   // Define a callback function to handle the response from the server
@@ -320,7 +319,6 @@ else{
   document.getElementById("no_products").style.display="inline";
 }
 }        
-
 
 function send(){
 // Checking if is everything set for submit / validation
@@ -352,7 +350,6 @@ var count=updateTotal();
       var total=localStorage.getItem('total');
     }
 
-  
   var xhr = new XMLHttpRequest();
   // Specify the PHP file that will handle the data
   var phpFile = 'cart.php';

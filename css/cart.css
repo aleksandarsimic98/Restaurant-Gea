@@ -130,11 +130,14 @@ tr{
 
 }
 @media only screen and (max-width: 1300px){
+    .heading{
+        top: 300px;
+    }
     .form{
     width: 100%; /* Adjust width as needed */
     height: auto;
     margin: 50px auto; /* Center the form vertically and horizontally */
-    top: 0px; /* Reset top position */
+    top: 200px; /* Reset top position */
     left: 0; /* Reset left position */
     position: relative; /* Reset position to default */
     background-color: rgb(237, 237, 237, .0);
@@ -145,18 +148,19 @@ tr{
     border-radius: 15px;
     border: 2px solid rgba(255, 106, 0, 0.865);
     max-width: 300px;
+    top: 30px;
     }
     .ordered{
     position: relative;
     left: 1%;
-    top: 30px;
+    top: 200px;
     max-width: 320px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .logout{display: none;}
 
 .form{

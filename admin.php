@@ -66,13 +66,13 @@ if (isset($_POST['remove'])) {
     <div class="col">
       <table class="table">
         <th>Id</th>
-        <th>Name</th>
+        <th>First Name</th>
         <th>Last Name</th>
         <th>E-mail</th>
         <th>Username</th>
         <th>Password</th>
         <th>Age</th>
-        <th>Time</th>
+        <th>Time of Login</th>
         <th>Remove</th>
         <?php
 
