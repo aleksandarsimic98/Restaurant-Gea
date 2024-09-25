@@ -134,12 +134,12 @@ tr{
         top: 300px;
     }
     .form{
-    width: 100%; /* Adjust width as needed */
+    width: 100%; 
     height: auto;
-    margin: 50px auto; /* Center the form vertically and horizontally */
-    top: 200px; /* Reset top position */
-    left: 0; /* Reset left position */
-    position: relative; /* Reset position to default */
+    margin: 50px auto; 
+    top: 200px; 
+    left: 0; 
+    position: relative; 
     background-color: rgb(237, 237, 237, .0);
     border: none;
     box-shadow: none;

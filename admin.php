@@ -1,5 +1,5 @@
 <?php
-// if admin is not logged in can't access to this page 
+// if admin is not logged in can't access to this page  //
 session_start();
 if(!isset($_SESSION['admin'])){
   header("Location: login.php");

@@ -1,7 +1,7 @@
 <?php
 // if 'user' is not logged in can't access to this page 
 
-include_once("connection.php");       //connection to the DB
+include_once("connection.php");       //connection to the DB //
 // getting form data
 $first_second_name=filter_input(INPUT_POST, 'first_second_name');
 $address=filter_input(INPUT_POST, 'address');
