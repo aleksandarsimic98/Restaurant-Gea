@@ -14,7 +14,7 @@
 
 ## How to Use the Project
 
-- Video on how to use the project and presentation of the project: 
+- Video on how to use the project and presentation of the project: https://www.youtube.com/watch?v=9aUSiG5rFAQ
 - The first page presents the small business, including products, an about us section, a gallery, and more.
 - If you want to order some products, you must first sign up on the Sign-Up page and fill out all the fields.
 - After that, go to the Login page and enter your username and password (which you created during Sign-Up).
