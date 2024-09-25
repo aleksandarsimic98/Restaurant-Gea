@@ -86,7 +86,7 @@ if(isset($_POST['remove_button'])){
         include_once("connection.php");       //connection to the DB 
 
         //getting everything from 'porudzbina_info' and 'porudzbina_stavkee' and insert that into html table
-        //to show details of purchaser and what is ordered
+        //to show details of purchaser and what is ordered //
         $query_info="SELECT * FROM order_info";
         $result_info = mysqli_query($connection, $query_info);
         while($row_info=mysqli_fetch_assoc($result_info)){

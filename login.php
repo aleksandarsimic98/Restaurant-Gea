@@ -7,7 +7,7 @@
 
     include_once("connection.php");       //connection to the DB 
 
-    // if enter username and password matches username and password from the database user is logged in
+    // if enter username and password matches username and password from the database user is logged in //
     
  if(null!==($user_username && $user_password)){
     $query= "SELECT * FROM users WHERE username= '$user_username' and psw='$user_password'";

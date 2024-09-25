@@ -1,5 +1,5 @@
 <?php
-// if user is not logged in can't access to this page
+// if user is not logged in can't access to this page //
 session_start();
 if(!isset($_SESSION['user'])){
   header("Location: login.php");

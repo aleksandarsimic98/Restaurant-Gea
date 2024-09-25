@@ -1,4 +1,4 @@
-// Create rows for items
+// Create rows for items //
         // Predjela
             if(localStorage.getItem('nazivprvii') && localStorage.getItem('cenaprvii')){
  

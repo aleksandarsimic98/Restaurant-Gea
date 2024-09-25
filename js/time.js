@@ -1,5 +1,5 @@
 function updateTime() {
-    // Make a GET request to the World Time API
+    // Make a GET request to the World Time API //
     fetch("http://worldtimeapi.org/api/timezone/Europe/Belgrade")
   .then(response => response.json()) // Parse the JSON response
   .then(data => {

@@ -152,7 +152,7 @@
 
   $first_card= "SELECT * FROM products WHERE id=1";  
   $result_first_card= mysqli_query($connection, $first_card);            //1. card info from DB
-  $final_first_card=mysqli_fetch_assoc($result_first_card);   /////////////////////////////////////////////////
+  $final_first_card=mysqli_fetch_assoc($result_first_card);   ///////////////////////////////////////////////////
 
   $second_card= "SELECT * FROM products WHERE id=14";  
   $result_second_card= mysqli_query($connection, $second_card);            //2. card info from DB
