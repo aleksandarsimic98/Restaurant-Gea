@@ -1,18 +1,9 @@
 <?php
-// if admin is not logged in can't access to this page 
+//if user is not logged in can't access to this page 
 session_start();
-if(!isset($_SESSION['admin'])){
+if(!isset($_SESSION['user'])){
   header("Location: login.php");
   die();
-}
-
-include_once("connection.php");       //connection to the DB 
-
-if (isset($_POST['remove'])) {
-    // Check if the 'izbrisi' button is clicked, then deleting the user
-    $idToDelete = $_POST['idToDelete'];
-    $deleteQuery = "DELETE FROM users WHERE id = $idToDelete";
-    mysqli_query($connection, $deleteQuery);
 }
 ?>
 <!DOCTYPE html>
@@ -26,11 +17,11 @@ if (isset($_POST['remove'])) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
+  <title>Restaurant Gea</title>
   <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
   <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
-  <link rel="stylesheet" href="css/admin.css?v=<?php echo time();?>">
-  <title>Restoran Gea Admin</title>
+  <link rel="stylesheet" href="css/home_page.css?v=<?php echo time();?>">
+  <link rel="stylesheet" href="css/index.css?v=<?php echo time();?>">
 </head>
 
 <!-- END head -->
@@ -43,72 +34,95 @@ if (isset($_POST['remove'])) {
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="admin.php"><img class="nav_image" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a>
+    <a class="navbar-brand" href="home_page.php"><img class="nav_image" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <a class="navbar-navv" href="admin_ordered.php" > <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>Orders</b></i> </a>
-      <a class="navbar-navvvv" href="admin.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Users</b></i> </a>
+      <a class="cart" href="cart.php"> <i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i> <b><i>Cart</b></i> </a>
     <form action="logout.php">
-      <button type="submit" class="logout" value="Logout" >Logout</button>
+      <button type="submit" class="logout" value="Logout">Logout</button>
     </form>
-    <h6 class="vreme">  </h6>
+    <a class="navbar-navvvv" href="home_page.php" id="home"> <i class="fa-solid fa-house"  style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
+    <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+    <h6 class="vreme"></h6>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
+        <li class="nav-item">
+          <a class="nav-link" href="home_page.php"><i class="fa-solid fa-house"
+          style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.php"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i>
+          <b style="color: #ffffff;"><i>Cart</i></b></a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" href="logout.php"> <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180" 
+          style="color: #ffffff;"></i> <b> Logout</b> </a>
+        </li>
+        <hr class="hamline">
+        <li class="nav-item">
+          <a class="tele" href=""> <i class="fa-solid fa-phone" 
+          style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+        </li>
+        <li class="nav-item">
+          <p class="worktime"><b>Mon-Fri..................09h-23h</b></p>
+        </li>
+        <li class="nav-item">
+          <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
+        </li>      
+      </ul>  
+    </div>
   </div>
 </nav>
 
 <!-- END Navbar -->
 
-<!-- BEGIN registered users list -->
+<!-- BEGIN type food select -->
 
-<h1 class="heading"><b> <i>Users</i> </b></h1> <br><br>
+<div class="apsclass"></div>
 <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <table class="table">
-        <th>Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>E-mail</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>Age</th>
-        <th>Time of Login</th>
-        <th>Remove</th>
-        <?php
-
-        include_once("connection.php");       //connection to the DB
-  
-        //writing the users from DB into table 
-        $query="SELECT * FROM users";
-        $result = mysqli_query($connection, $query);
-        while($row=mysqli_fetch_assoc($result)){
-        echo "
-        <tbody>
-        <tr>
-        <th> ".  $row["id"]  . "</th>
-        <th>".  $row["first_name"]  . "</th>
-        <th>".  $row["second_name"]  . "</th>
-        <th>".  $row["email"]  . "</th>
-        <th>".  $row["username"]  . "</th>
-        <th>".  $row["psw"]  . "</th>
-        <th>".  $row["age"]  . "</th>
-        <th>".  $row["time_of_login"]  . "</th>
-  
-        <form action='admin.php' method='post'>
-        <input type='hidden' name='idToDelete' value='" . $row["id"] . "'>
-        <th> <input type='submit' name='remove' class='remove' value='Remove' onClick=remove()></th>
-        </form>
-        </tr>
-        </tbody>
-       " ;
-       }
-       ?>
-      </table>
+  <a href="appetizers.php" class="food">
+  <div class="menu">  
+    <div class="row">
+      <div class="col">
+        <img src="img/3-Ingredient-Appetizers-38e65f4cf4d04135b26c591181f854d4.jpg" class="image" alt="appetizers">
+        <p class="heading"> <b> Appetizers <b></p>
+      </div>
     </div>
   </div>
 </div>
+</a>
 
-<!-- END registered users list -->
+<div class="apsclass"></div>
+<div class="container text-center">
+  <a href="main_dishes.php" class="food">
+  <div class="menu"> 
+    <div class="row">
+      <div class="col">
+        <img src="img/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" class="image" alt="main dishes">
+        <p class="heading"> <b> Main dishes <b></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+  
+<div class="apsclass"></div>
+<div class="container text-center">
+  <a href="drinks.php" class="food">
+  <div class="menu">
+    <div class="row">
+      <div class="col">
+        <img src="img/pexels-photomix-company-96974.jpg" class="image" alt="drinks">
+        <p class="heading"> <b> Drinks <b></p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+
+<!-- END type food select -->
 
 <!-- BEGIN footer -->
 
@@ -140,7 +154,7 @@ if (isset($_POST['remove'])) {
       </div> 
     </div>
   </div>
-</footer>  
+</footer>   
 
 <!-- END footer -->
 
@@ -149,11 +163,4 @@ if (isset($_POST['remove'])) {
 <!-- END body -->
 
 </html>
-
-<script>
-// Alert if 'izbrisi' button is clicked 
-function remove(){
-   alert("User removed");
-}
-</script>
 <script type="text/javascript" src="js/time.js"></script> 

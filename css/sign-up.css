@@ -1,7 +1,23 @@
-.forma{
+/*-----------------------------------------
+
+    Cover Image
+
+/*----------------------------------------*/
+.coverimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+/*-----------------------------------------
+
+    Sign up Form CSS - Form, Heading, Input, Send Button 
+
+/*----------------------------------------*/
+.form{
     position: relative;
     width: 500px;
-    height: 700px;
+    height: auto;
     margin-top: 150px;
     margin-bottom: auto;
     margin-left: auto;
@@ -10,18 +26,24 @@
     border: 3px solid rgba(255, 106, 0, 0.865);
     box-shadow: 3px 3px 10px black;
 }
-.naslov_forme{
+.heading{
     position: relative;
     text-align: center;
     top: 13px;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
 }
 input{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
     padding: 7px;
-    left: 41px;
-    
+    width: 405px;
+    border: 1px solid rgba(255, 106, 0, 0.865);
 }
-.dugme{
+.button{
     position: relative;
     width: 415px;
     border-radius: 60px;
@@ -29,22 +51,20 @@ input{
     border:3px solid rgba(255, 106, 0, 0.865);
     font-weight: bold;
     color: white;
+    bottom: 40px;
 }
-.dugme:hover{
+.button:hover{
     background-color: white;
     border:3px solid rgba(255, 106, 0, 0.865);
     color: rgba(255, 106, 0, 0.865);
+    opacity: .8 ; 
+    transition: 0.5s;
 }
+/*-----------------------------------------
 
-.dugme:hover{
-    opacity: .8 ;
-}
-img{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
+    Footer
+
+/*----------------------------------------*/
 footer{
     position: relative;
     top: 130px;
@@ -52,32 +72,34 @@ footer{
     height: 300px;
     
 }
-#alerttekst{
+#alert_text{
    text-align: center;
 }
-.unos{
-    width: 201px;
-}
-.unoss{
-    width: 405px;
-}
-
-
-
 @media only screen and (max-width: 1400px){
-   .forma{
-    width: 400px;
-    height: 600px;
-   }
-   .unos{
-    width: 150px;
+    .form{
+        width: 500px; 
+        height: auto; 
+    }
+    input{
+        max-width: 500px;
+      }
+ 
 }
-.unoss{
-    width: 305px;
-}
-.dugme{
-    width: 305px;
-    bottom: 60px;
-}
+@media only screen and (max-width: 768px){
+    .form{
+        width: 100%; 
+        height: auto; 
+        background-color: rgb(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
 
-}
+
+    }
+  input{
+    border-radius: 15px;
+    border: 2px solid rgba(255, 106, 0, 0.865);
+    max-width: 300px;
+  }
+
+ 
+    }

@@ -1,28 +1,54 @@
-.forma{
+/*-----------------------------------------
+
+    Cover Image
+
+/*----------------------------------------*/
+.coverimg{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+}
+/*-----------------------------------------
+
+    Form CSS - Form, Heading, Input, Button
+
+/*----------------------------------------*/
+.form{
     position: relative;
     width: 500px;
-    height: 500px;
+    height: 400px;
     margin-top: 195px;
     margin-bottom: auto;
-    margin-left: 200px;
+    margin-left: auto;
     margin-right: auto;
     background-color: rgb(237, 237, 237);
     border: 3px solid rgba(255, 106, 0, 0.865);
     display: inline-block;
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px black;  
 }
-.naslov_forme{
+.heading{
     position: relative;
     text-align: center;
-    top: 13px;
+    top: 35px;
+    text-decoration: underline solid rgb(251, 177, 40);
+    font-family: cursive;
 }
 input{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
     padding: 7px;
-    left: 41px;
-    top: 60px;
+    border: 1px solid rgba(255, 106, 0, 0.865);
 }
-.dugme{
+.enter{
+    position: relative;
+    top: 40px;
+    width: 405px;
+ }
+.button{
     position: relative;
     background-color: rgba(255, 106, 0, 0.865);
     width: 415px;
@@ -32,65 +58,70 @@ input{
     color: white;
     border-radius: 60px;
 }
-.dugme:hover{
+.button:hover{
     background-color: white;
     border:3px solid rgba(255, 106, 0, 0.865);
     color: rgba(255, 106, 0, 0.865);
+    opacity: .8 ; 
+    transition: 0.5s;
 }
-.dugme:hover{
-    opacity: .8 ;
-}
-img{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
+
+/*-----------------------------------------
+
+    Footer
+
+/*----------------------------------------*/
 footer{
     position: relative;
     top: 330px;
 }
-#alerttekst{
-    text-align: center;
- }
- .unos{
-    width: 405px;
- }
- .noaccount{
-    position: relative;
-    bottom: -135px;
-    right: -230px;
- }
- .adminn{
-    position: relative;
-    bottom: -135px;
-    right: -260px;
- }
-
  @media only screen and (max-width: 1400px){
-    .forma{
+    .form{
         width: 400px;
         height: 400px;
-        margin-left: 180px;
-
+        
+        margin-left: auto;
+        margin-right: auto;
     }
-    .dugme{
+    .enter{
         width: 310px;
-        top: 0px;
+        top: 30px;
     }
-      .unos{
+      .button{
         width: 310px; 
         top: 30px;
         
     }
-  
  }
 
  @media only screen and (min-width: 1819px){
-    .forma{
-      top: 100px;
-      left: 150px;
+    .form{
+      margin-left: auto;
+      margin-right: auto;
     }
-    
  }
-
+ @media only screen and (max-width: 768px){
+    .form{
+        width: 100%; /* Adjust the width as needed */
+        top: 190px;
+        margin: 0 auto; /* Center horizontally */
+        padding: 0; /* Optional padding for spacing */
+        background-color: rgba(237, 237, 237, .0);
+        border: none;
+        box-shadow: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+  input{
+        border-radius: 15px;
+        border: 2px solid rgba(255, 106, 0, 0.865);
+        max-width: 300px;
+  }
+ }
+ @media only screen and (max-width: 991px){
+    .form{
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }

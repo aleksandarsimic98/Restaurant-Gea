@@ -1,44 +1,42 @@
 <?php
     // getting username and password into PHP variable
-
-    $kori_ime=filter_input(INPUT_POST, 'kor_ime');
-    $lozinkaa=filter_input(INPUT_POST, 'lozinka');
-
-    $kori_ime_admin=filter_input(INPUT_POST, 'kor_ime_admin');
-    $lozinka_admin=filter_input(INPUT_POST, 'lozinka_admin');
+    $user_username=filter_input(INPUT_POST, 'user_username');
+    $user_password=filter_input(INPUT_POST, 'user_password');
+    $admin_username=filter_input(INPUT_POST, 'admin_username');
+    $admin_password=filter_input(INPUT_POST, 'admin_password');
 
     include_once("connection.php");       //connection to the DB 
 
     // if enter username and password matches username and password from the database user is logged in
     
- if(null!==($kori_ime && $lozinkaa)){
-    $upit= "SELECT * FROM users WHERE korisnicko_ime= '$kori_ime' and lozinka='$lozinkaa'";
-    $rezultat= mysqli_query($konekcija, $upit);
-    $korisnik= mysqli_fetch_array($rezultat, MYSQLI_ASSOC);
-    if($korisnik){
-      session_start();
-      $_SESSION['korisnik'] = "yes";
-      header("Location: pocetna.php");
-      die();
+ if(null!==($user_username && $user_password)){
+    $query= "SELECT * FROM users WHERE username= '$user_username' and psw='$user_password'";
+    $user_result= mysqli_query($connection, $query);
+    $user= mysqli_fetch_array($user_result, MYSQLI_ASSOC);
+      if($user){
+        session_start();
+         $_SESSION['user'] = "yes";
+         header("Location: home_page.php");
+         die();
     }
  }
 
-
- if(null!==($kori_ime_admin && $lozinka_admin)){
-  $upitt= "SELECT * FROM adminn WHERE korisnicko_ime= '$kori_ime_admin' and lozinka='$lozinka_admin'";
-  $rezultatt= mysqli_query($konekcija, $upitt);
-  $admin= mysqli_fetch_array($rezultatt, MYSQLI_ASSOC);
-  if($admin){
-    session_start();
-    $_SESSION['admin'] = "yes";
-    header("Location: admin.php");
-    die();
+ if(null!==($admin_username && $admin_password)){
+  $admin_query= "SELECT * FROM adminn WHERE admin_username= '$admin_username' and psw='$admin_password'";
+  $admin_result= mysqli_query($connection, $admin_query);
+  $admin= mysqli_fetch_array($admin_result, MYSQLI_ASSOC);
+    if($admin){
+     session_start();
+     $_SESSION['admin'] = "yes";
+     header("Location: admin.php");
+     die();
   }
 }
-
-
 ?>
 <!DOCTYPE html>
+
+<!-- BEGIN head -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,97 +49,128 @@
     <link rel="stylesheet" href="css/login.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="css/navbar.css?v=<?php echo time();?>">
-    <title>Prijava</title>
+    <title>Login</title>
 </head>
+
+<!-- END head -->
+
+<!-- BEGIN body -->
+
 <body>  
+
+<!-- BEGIN Navbar -->
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"> <img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>RESTORAN GEA</b></i>  </a>
+    <a class="navbar-brand" href="index.php"><img class="nav_image" src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      
     </button>
-      <a class="navbar-navv" href="sign-up.php"> <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>REGISTRACIJA</b></i> </a>
-      <a class="navbar-navvv" href="login.php"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> <b><i>PRIJAVA</b></i> </a>
-      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>POČETNA</b></i> </a>
+      <a class="navbar-navv" href="sign-up.php"> <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> <b><i>Sign Up</b></i> </a>
+      <a class="navbar-navvv" href="login.php"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> <b><i>Login</b></i> </a>
+      <a class="navbar-navvvv" href="index.php"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> <b><i>Home</b></i> </a>
       <a class="navbar-navvvvv" href=""> <i class="fa-solid fa-phone" style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
       <h6 class="vreme">  </h6>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo" class="logoham">
+              <li class="nav-item">
+                <a class="nav-link" href="index.php"><i class="fa-solid fa-house"
+                style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Home</i></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.php"><i class="fa-solid fa-user"
+                style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Login</i></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sign-up.php"><i class="fa-solid fa-user-plus"
+                style="color: #ffffff;"></i> <b style="color: #ffffff;"><i>Sign Up</i></b></a>
+              </li>
+              <hr class="hamline">
+              <li class="nav-item">
+                <a class="tele" href=""> <i class="fa-solid fa-phone" 
+                style="color: #ffffff;"></i> <b><i>013/ 111 45 505</b></i> </a>
+              </li>
+              <li class="nav-item">
+                <p class="worktime"><b>Mon-Fri..................09h-23h</b></p>
+              </li>
+              <li class="nav-item">
+                <p class="worktime"><b>Sat-Sun..................12h-00h</b></p>
+              </li>     
+      </ul> 
+    </div>
   </div>
 </nav>
 
-<img src="img/dish-restaurant-dining-food-wallpaper.jpg" alt="">
+<!-- END Navbar -->
 
-    <div class="forma">
+  <img class="coverimg" src="img/dish-restaurant-dining-food-wallpaper-min.jpg" alt="cover image">
 
-<h2 class="naslov_forme"> <b>Prijavite se ovde</b></h2> <br><br>
+<!-- BEGIN User login form -->
 
-
-<form action="login.php" id="Iform" method="post">
-<input type="text" placeholder="Korisnicko ime" class="unos" name="kor_ime" id="username"> <br><br>
-<input type="password" placeholder="lozinka" class="unos" name="lozinka" id="password"> <br><br>
- <br><br>
- <input class="dugme" type="submit" value="Prijavi me" name="posalji" > 
- 
-</form>
-
+<div class="form">
+  <h2 class="heading"> <b>User Login</b></h2> <br><br>
+  <form action="login.php" id="Iform" method="post">
+    <input type="text" placeholder="Username" class="enter" name="user_username" id="username"> <br>
+    <input type="password" placeholder="Password" class="enter" name="user_password" id="password"> <br><br>
+    <br>
+    <input class="button" type="submit" value="Login"> 
+  </form>
 </div>
 
-    <div class="forma">
-    <h2 class="naslov_forme"> <b>Admin Login</b></h2> <br><br>
-<form action="login.php" method="post">
+<!-- END User login form -->
 
-    <input type="text" placeholder="Korisnicko ime" class="unos" name="kor_ime_admin"> <br><br>
-    <input type="password" placeholder="lozinka" class="unos" name="lozinka_admin"> <br><br>
-    
-     <br><br>
-     <input class="dugme" type="submit" value="Prijavi me"> 
-</form>
+<!-- BEGIN Admin login form -->
 
+<div class="form">
+  <h2 class="heading"> <b>Admin Login</b></h2> <br><br>
+  <form action="login.php" method="post">
+    <input type="text" placeholder="Username" class="enter" name="admin_username"> <br>
+    <input type="password" placeholder="Password" class="enter" name="admin_password"> <br><br>
+    <br>
+    <input class="button" type="submit" value="Admin Login"> 
+  </form>
 </div>
 
+<!-- END Admin login form -->
+
+<!-- BEGIN footer -->
 
 <footer>
   <div class="container text-center">
     <div class="row">
-     <div class="col">
-     <p> <a class="footer-brand" href="#"><img class="navslika" src="img/pngtree-food-logo-png-image_5687686.png" alt=""><b><i>Restoran Gea</b></i>  </a> </p>
-      <br> <br><br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/BNnrySycdJL8EWss9"> <b>Cara Lazara 1C - Pančevo</b> </a>
-      <br> <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">013/ 111 45 505</b> </a></p>
-      <br><br>
-      <a class="kon" target="_blank" href="https://maps.app.goo.gl/s8V43fP77CoKsC1Q9"> <b>Cara Dušana 51 - Beograd</b> </a>
-      <br> <br>
-      <p> <spam class="tel"> <b>TELEFON -</b> </spam>  <a href="tel:+4733378901"> <b class="kon">011/ 333 78 901</b> </a></p>
-      <i class="fa-regular fa-copyright" style="color: #ffffff;"></i> <i class="autor">Sva prava su zadržana. Aleksandar Simić 2023</i>
-      
-    
-     </div>
-      <div class="col">
-     <p class="foonas"> <b>RADNO VREME</b></p>
-     <br><br><br><br><br>
-     <p class="kon"><b>Ponedeljak - Subota :</b>  <br> <b>07:00 - 00:00</b> </p>
-     <br> 
-     <p class="kon"> <b>Nedelja:</b>  <br> <b>16:00 - 00:00</b></p>
-     
-       <div class="drumrezee">
-    <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="drumreze"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
-    <a target="_blank" href="https://www.instagram.com/"><div  class="drumreze"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
-    <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="drumreze"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a> 
-     </div>
-     </div>
-
- <div class="container text-center">
-    <div class="row">
-     <div class="col">
-    <hr class="footerlinija">
+     <div class="col-sm">
+        <p> <a class="footer-brand" href="index.php"><img src="img/0NqJfO-LogoMakr.png" alt="Gea Logo"></a> </p>
+        <br> <br>
+        <a class="address_and_number" target="_blank" href="https://maps.app.goo.gl/jBWd4Kxz4QDXiCZr9"> <b>123 Main Street, New York</b> </a>
+        <br>
+        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="address_and_number">578-444</b> </a></p>
+        <br>
+        <a class="address_and_number" target="_blank" href="https://maps.app.goo.gl/qMntydyRixXXWLrs5"> <b>456 Elm Street, New York</b> </a>
+        <br> 
+        <p> <spam class="tel"> <b>PHONE -</b> </spam>  <a href="tel:+4733378901"> <b class="address_and_number">293-332</b> </a></p>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.1770537226935!2d-73.83348987655775!3d40.762245923609576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2600f928bb159%3A0x939edd86cd71a6ef!2zMTIzIE1haW4gU3QsIEZsdXNoaW5nLCBOWSAxMTM1NCwg0KHRmNC10LTQuNGa0LXQvdC1INCU0YDQttCw0LLQtQ!5e0!3m2!1ssr!2srs!4v1725635944076!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-sm">
+        <p class="working_time"> <b>WORKING TIME</b></p>
+        <br><br>
+        <p class="address_and_number"><b>Monday - Friday :</b>  <br> <b>09:00h - 23:00h</b> </p>
+        <br>
+        <p class="address_and_number"> <b>Saturday - Sunday:</b>  <br> <b>12:00h - 00:00h</b></p>
+        <hr>
+        <a target="_blank" href="https://www.facebook.com/?locale=sr_RS"><div class="social_networks"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div></a> 
+        <a target="_blank" href="https://www.instagram.com/"><div  class="social_networks"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div></a> 
+        <a target="_blank" href="https://twitter.com/?lang=sr"><div target="_blank" class="social_networks"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></div></a>
+      </div> 
     </div>
-    </div>
-   </div>
+  </div>
 </footer> 
 
+<!-- END footer -->
 
 </body>
+
+<!-- END body -->
+
 </html>
 <script type="text/javascript" src="js/time.js"></script> 

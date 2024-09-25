@@ -1,0 +1,70 @@
+/*-----------------------------------------
+
+    Cards CSS
+
+/*----------------------------------------*/
+.cards_div{
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.card{
+    position: relative;
+    width: 18rem; 
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/*-----------------------------------------
+
+    Navbar CSS
+
+/*----------------------------------------*/
+.navbar-navvv{
+    position: absolute;
+    right: 500px;
+    color: black;
+    font-size: 18px;
+}
+
+.navbar-navvvv{
+    right: 610px;
+}
+/*-----------------------------------------
+
+    Add to cart Button CSS
+
+/*----------------------------------------*/
+.btn-primary{
+    border-radius: 60px;
+    background-color: rgba(255, 106, 0, 0.865);
+    border:3px solid rgba(255, 106, 0, 0.865);
+}
+.btn-primary:hover{
+    background-color: white;
+    border:3px solid rgba(255, 106, 0, 0.865);
+    color: rgba(255, 106, 0, 0.865);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 1400px){
+    .card {
+        width: 15rem; 
+    }
+}
+@media only screen and (max-width: 991px){
+    .cart, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme
+    {
+            display: none;
+    }
+}
+@media only screen and (max-width: 678px){
+    .cart, .logout, .navbar-navvvv,.navbar-navvvvv, .vreme, .product{display: none;}
+    .naslovpred{
+        margin-top: 100px;
+    }
+    .card{
+        position: relative;
+        margin-top: 70px;
+    }
+}

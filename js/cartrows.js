@@ -73,7 +73,6 @@
         //////////////////////////////////////////////////////////////////////////////
          //Pica
          if(localStorage.getItem('nazivprviiii') && localStorage.getItem('cenaprviiii')){
-     
          createItemRow('prvii' ,localStorage.getItem('nazivprviiii'),localStorage.getItem('cenaprviiii'), 'nazivprviiii', 'cenaprviiii');
          updateTotal(localStorage.getItem('cenaprviiii'));
         }
