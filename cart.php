@@ -289,9 +289,20 @@ function createItemRow(identifier, item, item_price, localStorage_product, local
   var submit_button=document.getElementById('submit');
   //if submit button is clicked send data to server side by JSON
   submit_button.addEventListener('click', function() {
+
+  var first_second_name=document.getElementById("first_second_name").value;
+  var address=document.getElementById("address").value;
+  var city=document.getElementById("city").value;
+  var post_no=document.getElementById("post_no").value;
+  var email=document.getElementById("email").value;
+  var phone=document.getElementById("phone").value;    
+
+
+  if(first_second_name && address && city && post_no && email && phone){
   var product = item;
   var price= resultTd.textContent; 
   var quantity = sessionData['quan' + input.id] || 1;
+  }
   // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
   // Specify the PHP file that will handle the data

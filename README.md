@@ -1,26 +1,26 @@
 # E-commerce "Restaurant Gea" Project
 
-- Reataurnat Gea is small business E-commerce website.
-- Visitors can be informed about business and order products at the same time.
-- It includes presentation of the business on index page (products, about us, gallery...), SignUp page, Login page, Product Pages, Cart and Admin Dashboard.
+- Restaurant Gea is a small business e-commerce website.
+- Visitors can learn about the business and order products at the same time.
+- It includes a presentation of the business on the index page (products, about us, gallery, etc.), as well as a sign-up page, login page, product pages, cart, and admin dashboard.
 
 ## How to Install and Run the Project
 
-- Download all the files in htdocs folder on your machine
-- Open xampp-control.exe and start "apache" and "MySql"
-- Open PHPMyAdmin and create new database called "restaurant_gea" and import .sql file form database folder
-- In the borwser search bar type: localhost/Restaurant%20Gea/ 
-- Video how to run the project: 
+- Download all the files in the htdocs folder on your machine.
+- Open xampp-control.exe (or any other local web server) and start 'Apache' and 'MySQL server.
+- Open phpMyAdmin and create a new database called 'restaurant_gea,' then import the .sql file from the database folder.
+- In the borwser search bar type: localhost/restaurant_gea/ 
+- Admin Dashboard username and password: admin admin
 
 ## How to Use the Project
 
-- First page is presentation of small business with products, about us, gallery...
-- If you want to order some product(s) first you must to SignUp on SignUp page and fill all the fields.
-- After that, go to Login page and type your username and password (username and password are made on SignUp).
-- Then you choose the type of product and add wanted product(s) to the cart.
-- In the cart page fill all the fields and choose the quantity of the products. Than click on "Place Order" to finsih shopping.
-- On Admin Dashboard will be shown costumer info with the order that is made.
-- Video how to Use the project: 
+- Video on how to use the project and presentation of the project: 
+- The first page presents the small business, including products, an about us section, a gallery, and more.
+- If you want to order some products, you must first sign up on the Sign-Up page and fill out all the fields.
+- After that, go to the Login page and enter your username and password (which you created during Sign-Up).
+- Then choose the type of product and add the desired product(s) to the cart by clicking the 'Add to Cart' button.
+- On the cart page, fill in all the fields and choose the quantity of the products. Then click on 'Place Order' to finish shopping.
+- On the Admin Dashboard, customer information will be displayed along with the orders that have been made.
 
 ## Technical Stuff 
 
@@ -31,9 +31,9 @@
 
 ### Comment
 
-- Can be added a new functions, like changing existing and adding new products through Admin Dashboard, single page for single product, ect...
-- Everythig can be easely edited
-- Any suggestion is welcome. Greetings, Alex Simic
+- New functions can be added, such as changing existing products, adding new products through the Admin Dashboard, and creating a single page for each product, etc.
+- Everything can be easily edited and changed.
+- Any suggestions are welcome. Greetings, Alex Simic
 
 
 

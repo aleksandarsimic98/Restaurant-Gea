@@ -112,8 +112,10 @@ if(isset($_POST['remove_button'])){
                 $query_ordered="SELECT * FROM ordered_products WHERE id=$row_info[id]";
                 $result_ordered = mysqli_query($connection, $query_ordered);
                 while($row_ordered=mysqli_fetch_assoc($result_ordered)){
+                 
                  echo "
                   <tr>
+                  
                     <td>".  $row_ordered["product"]  . "</td>
                     <td>". $row_ordered["quantity"] ."</td>
                     <td>". $row_ordered["price"] .' ' . 'USD'."</td>
@@ -122,7 +124,8 @@ if(isset($_POST['remove_button'])){
                     </form>
                   </tr>
                 ";
-                }  
+                 
+              } 
                 echo"
               </thead>
             </table>
