@@ -2,17 +2,37 @@
 // Collecting form data and insert into PHP variable
 $first_name=filter_input(INPUT_POST, 'first_name');
 $second_name=filter_input(INPUT_POST, 'second_name');
-$email=filter_input(INPUT_POST, 'email');
+$email=filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $username=filter_input(INPUT_POST, 'username');
 $password=filter_input(INPUT_POST, 'password');
-$age=filter_input(INPUT_POST, 'age');
+$age=filter_input(INPUT_POST, 'age', FILTER_VALIDATE_INT);
+
 
 include_once("connection.php");       //connection to the DB
 
+
+$first_name = $connection->real_escape_string($first_name);
+$second_name = $connection->real_escape_string($second_name);
+$email = $connection->real_escape_string($email);
+$username = $connection->real_escape_string($username);
+$password = $connection->real_escape_string($password);
+$age = $connection->real_escape_string($age);
+
+
 //insert into database if everything is set
 if(null==!($first_name && $second_name && $email && $username && $password && $age)){
-  $query= "INSERT INTO users (first_name, second_name, email, username, psw, age) VALUES ('$first_name', '$second_name', '$email', '$username', '$password', '$age')"; 
-  mysqli_query($connection, $query);
+  $query = "INSERT INTO users (first_name, second_name, email, username, psw, age) VALUES (?, ?, ?, ?, ?, ?)";
+  $stmt = mysqli_prepare($connection, $query);
+
+// Bind parameters
+  mysqli_stmt_bind_param($stmt, 'sssssi', $first_name, $second_name, $email, $username, $password, $age);
+
+// Execute the statement
+  mysqli_stmt_execute($stmt);
+
+// Close the statement
+  mysqli_stmt_close($stmt);
+
   header ("Location: sign-up.php", true, 303);
 }
 ?>
@@ -99,7 +119,7 @@ if(null==!($first_name && $second_name && $email && $username && $password && $a
 <div class="form">
   <h2 class="heading"><i> <b>Sign Up</b></i></h2> <br><br>
   <div id="danger" class="alert alert-danger" role="alert" style="display:none">
-    <p id="alert_text">Unsuccessful registration, you must fill in all fields.</p>
+    <p id="alert_text">Unsuccessful registration, you must fill in all fields correctly.</p>
   </div>
   <div id="success" class="alert alert-success" role="alert" style="display:none">
     <p id="alert_text">Successful registration</p>
@@ -167,13 +187,15 @@ function validation(){
       first_name=document.getElementById("first_name").value;
       second_name=document.getElementById("second_name").value;
       email=document.getElementById("email").value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   
       username=document.getElementById("username").value;
       password=document.getElementById("password").value;
       age=document.getElementById("age").value;
-     
+
+
     //checking that every field is filled
-    if(first_name==='' || first_name===null || second_name==='' || second_name===null || email==='' || email===null || username==='' || username===null || password==='' || password===null || age==='' || age===null){
-      alert("Unsuccessful registration, you must fill in all fields");
+    if(first_name==='' || first_name===null || second_name==='' || second_name===null || email==='' || email===null || !emailPattern.test(email) || username==='' || username===null || password==='' || password===null || age==='' || age===null || age < 1){
+      alert("Unsuccessful registration, you must fill in all fields correctly");
       document.getElementById("danger").style.display="block"; 
       document.getElementById("success").style.display="none";
     }
@@ -228,14 +250,21 @@ function validation(){
     else{
       document.getElementById("password").style.border="1px solid rgba(255, 106, 0, 0.865)"
     }
-    if(age==='' || age===null){
+    if(age==='' || age===null || age < 1){
         document.getElementById("age").style.border="3px solid red"
     }
     else{
       document.getElementById("age").style.border="1px solid rgba(255, 106, 0, 0.865)"
     }
-
-
+    if (!emailPattern.test(email)) {
+        document.getElementById("email").style.border="3px solid red"
+        return false; // Email is invalid
+    }
+     else{
+      document.getElementById("email").style.border="1px solid rgba(255, 106, 0, 0.865)"
+    }
+   
+ 
    //
   }
 

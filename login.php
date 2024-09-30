@@ -7,12 +7,29 @@
 
     include_once("connection.php");       //connection to the DB 
 
+    $user_username = $connection->real_escape_string($user_username);
+    $user_password = $connection->real_escape_string($user_password);
+
     // if enter username and password matches username and password from the database user is logged in //
     
  if(null!==($user_username && $user_password)){
-    $query= "SELECT * FROM users WHERE username= '$user_username' and psw='$user_password'";
-    $user_result= mysqli_query($connection, $query);
-    $user= mysqli_fetch_array($user_result, MYSQLI_ASSOC);
+    $query = "SELECT * FROM users WHERE username = ? AND psw = ?";
+    $stmt = mysqli_prepare($connection, $query);
+
+// Bind parameters
+    mysqli_stmt_bind_param($stmt, 'ss', $user_username, $user_password);
+
+// Execute the statement
+   mysqli_stmt_execute($stmt);
+
+// Get the result
+   $result = mysqli_stmt_get_result($stmt);
+
+// Fetch the user data
+   $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+// Close the statement
+mysqli_stmt_close($stmt);
       if($user){
         session_start();
          $_SESSION['user'] = "yes";
@@ -22,9 +39,23 @@
  }
 
  if(null!==($admin_username && $admin_password)){
-  $admin_query= "SELECT * FROM adminn WHERE admin_username= '$admin_username' and psw='$admin_password'";
-  $admin_result= mysqli_query($connection, $admin_query);
-  $admin= mysqli_fetch_array($admin_result, MYSQLI_ASSOC);
+  $admin_query = "SELECT * FROM adminn WHERE admin_username = ? AND psw = ?";
+  $stmt = mysqli_prepare($connection, $admin_query);
+
+// Bind parameters
+  mysqli_stmt_bind_param($stmt, 'ss', $admin_username, $admin_password);
+
+// Execute the statement
+  mysqli_stmt_execute($stmt);
+
+// Get the result
+  $result = mysqli_stmt_get_result($stmt);
+
+// Fetch the admin data
+  $admin = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+// Close the statement
+mysqli_stmt_close($stmt);
     if($admin){
      session_start();
      $_SESSION['admin'] = "yes";
