@@ -27,9 +27,18 @@ $total = $connection->real_escape_string($total);
 }
 // if form data exists, insert form data into DB
 if(null==!($first_second_name && $address && $city && $post_no && $email && $phone)){
-  $query_info= "INSERT INTO order_info (first_second_name, address_, city, post_no, email, phone) VALUES ('$first_second_name', '$address', '$city', '$post_no', '$email', '$phone')"; 
-   mysqli_query($connection, $query_info);
-   header ("Location: cart.php", true, 303); 
+  $query_info = "INSERT INTO order_info (first_second_name, address_, city, post_no, email, phone) VALUES (?, ?, ?, ?, ?, ?)";
+  $stmt = mysqli_prepare($connection, $query_info);
+
+// Bind parameters
+  mysqli_stmt_bind_param($stmt, 'ssssss', $first_second_name, $address, $city, $post_no, $email, $phone);
+
+// Execute the statement
+  mysqli_stmt_execute($stmt);
+
+// Close the statement
+  mysqli_stmt_close($stmt);
+  header ("Location: cart.php", true, 303); 
 }
   //insert total cost into DB
   if(!empty($_POST) && $total==!null){
