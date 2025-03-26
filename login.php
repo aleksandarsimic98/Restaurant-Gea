@@ -1,4 +1,5 @@
 <?php
+
     // getting username and password into PHP variable
     $user_username=filter_input(INPUT_POST, 'user_username');
     $user_password=filter_input(INPUT_POST, 'user_password');
@@ -8,35 +9,54 @@
     include_once("connection.php");       //connection to the DB 
 
     $user_username = $connection->real_escape_string($user_username);
-    $user_password = $connection->real_escape_string($user_password);
+
 
     // if enter username and password matches username and password from the database user is logged in //
     
- if(null!==($user_username && $user_password)){
-    $query = "SELECT * FROM users WHERE username = ? AND psw = ?";
+    session_start();
+
+if(null !== $user_username && null !== $user_password) {
+    $query = "SELECT * FROM users WHERE username = ?";
     $stmt = mysqli_prepare($connection, $query);
-
-// Bind parameters
-    mysqli_stmt_bind_param($stmt, 'ss', $user_username, $user_password);
-
-// Execute the statement
-   mysqli_stmt_execute($stmt);
-
-// Get the result
-   $result = mysqli_stmt_get_result($stmt);
-
-// Fetch the user data
-   $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-// Close the statement
-mysqli_stmt_close($stmt);
-      if($user){
-        session_start();
-         $_SESSION['user'] = "yes";
-         header("Location: home_page.php");
-         die();
+    
+    if(!$stmt) {
+        // Handle error
+        header("Location: login.php?error=database_error");
+        exit;
     }
- }
+    
+    mysqli_stmt_bind_param($stmt, 's', $user_username);
+    
+    if(!mysqli_stmt_execute($stmt)) {
+        header("Location: login.php?error=database_error");
+        exit;
+    }
+    
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    mysqli_stmt_close($stmt);
+    
+    if($user) {
+        // Verify if password column exists and verify password
+        if(isset($user['psw']) && password_verify($user_password, $user['psw'])) {
+            $_SESSION['user'] = "yes";
+            // Store more user data if needed
+      //      $_SESSION['user_id'] = $user['id']; // example
+            header("Location: home_page.php");
+            exit;
+        } else {
+            header("Location: login.php?error=invalid_credentials");
+            exit;
+        }
+    } else {
+        // No user found
+        header("Location: login.php?error=invalid_credentials");
+        exit;
+    }
+} 
+      
+  
+  
 
  if(null!==($admin_username && $admin_password)){
   $admin_query = "SELECT * FROM adminn WHERE admin_username = ? AND psw = ?";

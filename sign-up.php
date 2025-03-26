@@ -7,6 +7,8 @@ $username=filter_input(INPUT_POST, 'username');
 $password=filter_input(INPUT_POST, 'password');
 $age=filter_input(INPUT_POST, 'age', FILTER_VALIDATE_INT);
 
+$hashed_password=password_hash($password, PASSWORD_DEFAULT);
+
 
 include_once("connection.php");       //connection to the DB
 
@@ -15,17 +17,17 @@ $first_name = $connection->real_escape_string($first_name);
 $second_name = $connection->real_escape_string($second_name);
 $email = $connection->real_escape_string($email);
 $username = $connection->real_escape_string($username);
-$password = $connection->real_escape_string($password);
+$hashed_password = $connection->real_escape_string($hashed_password);
 $age = $connection->real_escape_string($age);
 
 
 //insert into database if everything is set
-if(null==!($first_name && $second_name && $email && $username && $password && $age)){
+if(null==!($first_name && $second_name && $email && $username && $hashed_password && $age)){
   $query = "INSERT INTO users (first_name, second_name, email, username, psw, age) VALUES (?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($connection, $query);
 
 // Bind parameters
-  mysqli_stmt_bind_param($stmt, 'sssssi', $first_name, $second_name, $email, $username, $password, $age);
+  mysqli_stmt_bind_param($stmt, 'sssssi', $first_name, $second_name, $email, $username, $hashed_password, $age);
 
 // Execute the statement
   mysqli_stmt_execute($stmt);

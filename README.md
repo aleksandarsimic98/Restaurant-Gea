@@ -33,7 +33,7 @@
 
 - New functions can be added, such as changing existing products, adding new products through the Admin Dashboard, and creating a single page for each product, etc.
 - Everything can be easily edited and changed.
-- Any suggestions are welcome. Greetings, Alex Simic
+- Any suggestions are welcome. Greetings, Alex Simic --
 
 
 
