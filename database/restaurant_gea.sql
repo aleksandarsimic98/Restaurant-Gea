@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2024 at 09:20 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Mar 26, 2025 at 09:38 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -57,6 +57,18 @@ CREATE TABLE `ordered_products` (
   `quantity` int(4) NOT NULL,
   `price` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ordered_products`
+--
+
+INSERT INTO `ordered_products` (`id`, `product`, `quantity`, `price`) VALUES
+(0, 'Chicken Parm Sliders', 3, 45),
+(0, 'Coca-Cola', 3, 12),
+(0, 'Bundt Pan Roast Chicken', 3, 75),
+(0, 'Chicken Parm Sliders', 3, 45),
+(0, 'Roast Arctic Char', 3, 120),
+(0, 'Coca-Cola', 3, 12);
 
 -- --------------------------------------------------------
 
@@ -142,7 +154,7 @@ CREATE TABLE `users` (
   `second_name` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `psw` varchar(30) NOT NULL,
+  `psw` varchar(300) NOT NULL,
   `age` int(3) NOT NULL,
   `time_of_login` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -197,7 +209,7 @@ ALTER TABLE `adminn`
 -- AUTO_INCREMENT for table `order_info`
 --
 ALTER TABLE `order_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -209,13 +221,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `total`
 --
 ALTER TABLE `total`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
